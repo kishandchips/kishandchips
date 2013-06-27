@@ -31,10 +31,11 @@
 }
 
 @mixin avenir-medium {
-	font-family:'Avenir LT W01 85 Heavy';
+	font-family:'Avenir LT W01 65 Medium';
 }
 
 .avenir-medium {
-	font-family:'Avenir LT W01 65 Medium';
+	@include avenir-medium;
 }
+
 

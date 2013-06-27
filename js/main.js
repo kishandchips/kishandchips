@@ -44,9 +44,6 @@
 			$(window).resize(this.resize);
 			this.resize();
 
-
-
-			this.photos.init();
 		},
 
 		loaded: function(){

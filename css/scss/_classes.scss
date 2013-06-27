@@ -41,11 +41,11 @@
 
 a {
 	text-decoration: none;
-	color: #850000;
+	color: #333;
 	cursor: pointer;
 	@include transition(all 0.3s ease);
 	&:hover {
-		color: #510000;
+		color: #f7ab00;
 	}
 }
 
@@ -304,7 +304,11 @@ a.light-brown:hover {
 }
 
 .inline-block {
-	display: inline-block;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    *display: inline;
 }
 
 .inline {
@@ -648,6 +652,21 @@ button {
 	}
 }
 
+.link {
+	color: #333333;
+	@include font-size(14);
+	@include avenir-black;
+	border-bottom: 2px solid #fbd100;
+	padding: 0 2.8rem 0.3rem 0.1rem;
+	@include inline-block;
+	background: url('../images/icons/links_arrow_right.png') right center no-repeat;
+
+	&.mail {
+		background: url('../images/icons/mail.png') left top no-repeat;
+		padding: 0 0.1rem 0.3rem 2.8rem;
+	}
+}
+
 .facebook-btn,
 .twitter-btn,
 .pinterest-btn {
@@ -843,7 +862,7 @@ $i: 1;
 }
 
 .span.break-on-mobile {
-	@include device-width(4) {
+	@include device-width(5) {
 		width: 100% !important;
 		margin-left: 0;
 		margin-right: 0;

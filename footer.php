@@ -12,12 +12,18 @@
 	<footer id="footer" class="site-footer" role="contentinfo">
 		<div class="top">
 			<div class="container inner">
-				<?php dynamic_sidebar('footer'); ?>
+				<div class="span three break-on-mobile"><span>Say Hello</span><a href="mailto:hello@kishandchips.com" class="link mail">hello@kishandchips.com</a></div>
+				<div class="span three break-on-mobile"><span>Have a project?</span><a href="" class="link">Project Planner</a></div>
+				<div class="span three break-on-mobile"><span>Want a job?</span><a href="" class="link">Send us your CV</a></div>
+				<div class="span one socials break-on-mobile">
+					<a href="" data-icon='"' title="Visit us on Twitter"></a>
+					<a href="" data-icon='!' title="Visit us on Facebook"></a>
+				</div>
 			</div>
 		</div>
 		<div class="bottom">
 			<div class="container inner">
-		
+				<span>&copy; 2013</span> KISH &amp; CHIPS
 			</div>
 		</div>
 	</footer><!-- #footer .site-footer -->

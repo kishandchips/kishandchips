@@ -33,8 +33,7 @@
         wp_enqueue_script('jquery');
     }
 	
-	function load_assets() {
-		wp_enqueue_style('font-styles', 'http://fast.fonts.com/cssapi/a57cd7a1-40f8-420b-9db8-bb7c7b70c15f.css');		
+	function load_assets() {	
 		wp_enqueue_style('style', get_template_directory_uri().'/css/style.css');
 
 		wp_enqueue_script('modernizr', get_template_directory_uri().'/js/libs/modernizr.min.js');

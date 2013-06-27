@@ -21,9 +21,9 @@ get_header(); ?>
 			<?php the_content(); ?>
 		</div>
 		<?php endif; ?>
-		<?php if ( get_field('content')):?>
-		<?php get_template_part('inc/content'); ?>
-		<?php endif; ?>
+		<?php //if ( get_field('content')):?>
+		<?php // get_template_part('inc/content'); ?>
+		<?php // endif; ?>
 	</div>
 	<?php endwhile; // end of the loop. ?>
 

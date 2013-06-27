@@ -1,1 +1,1 @@
-Wordpress theme for Kish & Chips
+

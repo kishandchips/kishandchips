@@ -14,18 +14,18 @@
 
 get_header(); ?>
 <section id="front-page" class="clearfix">
-	<?php if ( get_field('slides')) :?>
+	<?php // if ( get_field('slides')) :?>
 		<div id="homepage-scroller" class="scroller container" data-auto-scroll="true" >
 			<div class="outer">
 				<div class="inner">
 					<div class="scroller-mask">
 						<?php $i = 0; ?>
-						<?php while (the_repeater_field('slides')) : ?>
+						<?php // while (the_repeater_field('slides')) : ?>
 						<?php 
-							$image_id = get_sub_field('image_id');
-							$image = wp_get_attachment_image_src($image_id, 'slide');
-							$background_image_id = get_sub_field('background_image_id');
-							$background_image = wp_get_attachment_image_src($background_image_id, 'full');    			
+							// $image_id = get_sub_field('image_id');
+							// $image = wp_get_attachment_image_src($image_id, 'slide');
+							// $background_image_id = get_sub_field('background_image_id');
+							// $background_image = wp_get_attachment_image_src($background_image_id, 'full');    			
 						?>
 						<div class="scroll-item <?php if($i == 0) echo 'current'; ?>" data-id="<?php echo $i;?>" style="background-image: url(<?php echo $image[0];?>)">
 							<div class="content" style="background-image: url(<?php echo $background_image[0]; ?>);">
@@ -33,7 +33,7 @@ get_header(); ?>
 							</div>
 						</div>
 						<?php $i++; ?>
-						<?php endwhile; ?>
+						<?php // endwhile; ?>
 					</div>
 					<div class="scroller-navigation">
 						<a class="prev-btn"></a>
@@ -42,7 +42,7 @@ get_header(); ?>
 				</div>
 			</div>
 		</div><!-- #homepage-scroller -->
-	<?php endif; ?>
+	<?php //endif; ?>
 
 	<div id="widgets">
 		<div class="container">

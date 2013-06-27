@@ -33,16 +33,6 @@
 				return false;
 			});
 
-			$('.share-popup-btn').click(function(){
-				var url = $(this).attr('href');
-				var width = 640;
-				var height = 305;
-				var left = ($(window).width() - width) / 2;
-				var top = ($(window).height() - height) / 2;
-				window.open(url, 'sharer', 'toolbar=0,status=0,width='+width+',height='+height+',left='+left+', top='+top);
-				return false;
-			});
-
 			this.lightbox.init();
 			this.ajaxPage.init();
 
@@ -50,31 +40,6 @@
 			$('.mobile-navigation-btn', header).on('click', function(){
 				$('.main-navigation', header).slideToggle(200);
 			});
-
-			var countrySelectorForm = $('.country-selector-form');
-			$('select.country', countrySelectorForm).on('change', function(){
-				countrySelectorForm.submit();
-			});
-
-			$('select.currency').on('change', function(){
-				var currencyCode = $('option:selected', $(this)).data('currencycode');
-				$('ul.currency_switcher li a[data-currencycode='+currencyCode+']').trigger('click');
-			}).trigger('click');
-
-			$('body').bind('currency_converter_switch', function(){
-				setTimeout(function(){
-					currencyCode = $('ul.currency_switcher li a.active').data('currencycode');
-					$('select.currency').val(currencyCode);
-				}, 100);
-			}).trigger('currency_converter_switch');
-
-			if($.fn.fancybox){
-				$('.fancybox-btn').fancybox();
-			}
-
-			if($.fn.threeSixty){
-				$('.threesixty').threeSixty();
-			}
 
 			$(window).resize(this.resize);
 			this.resize();
@@ -236,45 +201,10 @@
 			// 	//scroller.height(setScrollItemsHeight);
 			// }
 
-			if(windowWidth <= 600 && mainNavigation.is(':visible')){
+			if(windowWidth <= 500 && mainNavigation.is(':visible')){
 				mainNavigation.hide();
-			} else if(windowWidth > 600 && !mainNavigation.is(':visible')) {
+			} else if(windowWidth > 500 && !mainNavigation.is(':visible')) {
 				mainNavigation.show();
-			}
-		},
-
-		photos: {
-			init: function(){
-				var container = main.photos.container = $('#photos'),
-					scroller = main.photos.scroller = $('.photo-list-container', container),
-					currXPos = main.photos.currXPos = 0,
-					itemWidth = main.photos.itemWidth = ($('.item:eq(0)', scroller).outerWidth(true) + 3) * 2;
-				
-				scroller.on('scroll', function(e){
-					main.photos.currXPos = scroller.scrollLeft();
-				});
-
-				$('.photos-navigation a', container).on('click', function(){
-					main.photos.scroll($(this).data('direction'));
-				});
-			},
-			scroll: function(direction){
-				var	scroller = main.photos.scroller,
-					currXPos = main.photos.currXPos,
-					newXPos	 = currXPos;
-					itemWidth = main.photos.itemWidth;
-
-				switch(direction){
-					case 'left':
-						newXPos -= itemWidth;
-						break
-					case 'right':
-
-						newXPos += itemWidth;
-						break;
-				}
-				scroller.animate({scrollLeft: newXPos});
-				main.photos.currXPos = newXPos;
 			}
 		}
 	}

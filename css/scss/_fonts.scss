@@ -6,4 +6,35 @@
 	@include arial;
 }
 
+@mixin avenir-roman {
+	font-family:'Avenir LT W01 55 Roman';
+}
+
+.avenir-roman {
+	@include avenir-roman;
+}
+
+@mixin avenir-black {
+	font-family:'Avenir LT W01 95 Black';
+}
+
+.avenir-black {
+	@include avenir-black;
+}
+
+@mixin avenir-heavy {
+	font-family:'Avenir LT W01 85 Heavy';
+}
+
+.avenir-heavy {
+	@include avenir-heavy;
+}
+
+@mixin avenir-medium {
+	font-family:'Avenir LT W01 85 Heavy';
+}
+
+.avenir-medium {
+	font-family:'Avenir LT W01 65 Medium';
+}
 

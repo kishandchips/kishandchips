@@ -34,15 +34,14 @@
     }
 	
 	function load_assets() {
-
+		wp_enqueue_style('font-styles', 'http://fast.fonts.com/cssapi/a57cd7a1-40f8-420b-9db8-bb7c7b70c15f.css');		
 		wp_enqueue_style('style', get_template_directory_uri().'/css/style.css');
 
 		wp_enqueue_script('modernizr', get_template_directory_uri().'/js/libs/modernizr.min.js');
 		wp_enqueue_script('jquery', get_template_directory_uri().'/js/libs/jquery.min.js');
-		wp_enqueue_script('easing', get_template_directory_uri().'/js/plugins/jquery.easing.js', array('jquery'), '', true);
-		wp_enqueue_script('scroller', get_template_directory_uri().'/js/plugins/jquery.scroller.js', array('jquery'), '', true);
-		wp_enqueue_script('imagesloaded', get_template_directory_uri().'/js/plugins/jquery.imagesloaded.js', array('jquery'), '', true);
-		wp_enqueue_script('main', get_template_directory_uri().'/js/main.js', array('jquery'), '', true);
+		wp_enqueue_script('easing', get_template_directory_uri().'/js/plugins/jquery.easing.js');
+		wp_enqueue_script('imagesloaded', get_template_directory_uri().'/js/plugins/jquery.imagesloaded.js');
+		wp_enqueue_script('main', get_template_directory_uri().'/js/main.js');
 	}
 	add_action('wp_enqueue_scripts', 'load_assets');
 	wp_head();
@@ -51,7 +50,6 @@
 </head>
 <body <?php body_class(); ?>>
 <div id="wrap" class="hfeed site">
-	<?php do_action( 'before' ); ?>
 	<header id="header" role="banner">
 		<div class="inner container">
 			<h1 class="logo-container">

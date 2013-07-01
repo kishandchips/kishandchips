@@ -176,7 +176,6 @@ if ( ! function_exists( 'custom_tinymce_options' )) {
 	} 
 }
 
-
 function get_queried_page(){
 	$curr_url = get_current_url();
 	$curr_uri = str_replace(site_url(), '', $curr_url);

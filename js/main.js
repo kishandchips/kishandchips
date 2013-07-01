@@ -198,9 +198,9 @@
 			// 	//scroller.height(setScrollItemsHeight);
 			// }
 
-			if(windowWidth <= 500 && mainNavigation.is(':visible')){
+			if(windowWidth <= 400 && mainNavigation.is(':visible')){
 				mainNavigation.hide();
-			} else if(windowWidth > 500 && !mainNavigation.is(':visible')) {
+			} else if(windowWidth > 400 && !mainNavigation.is(':visible')) {
 				mainNavigation.show();
 			}
 		}

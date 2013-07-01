@@ -32,9 +32,10 @@ html {
 }
 
 body {
+	@include avenir-medium;
 	height: 100%;
 	background: #FFF;
-	color: #333333;
+	color: #373737;
 	@include font-size(14);
 	line-height: 1.4;
 	min-width: 250px;
@@ -51,11 +52,12 @@ body {
 }
 
 #header {
-	height: 137px;
+	height: 144px;
 	background: #FFF;
 
 	@include device-width(4) {
 		height: auto;
+		padding-bottom: 25px;
 	}
 
 	> .inner {
@@ -91,7 +93,7 @@ body {
 			border-right: 1px solid #cecece;
 			margin-top: -62px;	
 	
-			@include device-width(5) {
+			@include device-width(4) {
 				display: block;
 			}
 		}
@@ -103,7 +105,7 @@ body {
 		margin: 0;
 
 		@include device-width(5) {
-			padding: 0 1em;
+			padding: 0;
 			margin-top: 30px;
 		}
 
@@ -164,7 +166,6 @@ body {
 #main {
 	position: relative;
 	z-index: 500;
-	padding: 1em 0 4em 0;
 }
 		
 #sidebar {}
@@ -183,12 +184,16 @@ body {
 			.span {
 				@include device-width(5) {
 					margin: 1rem 0;
-				}
-
-				span {
-					padding-right: 1.5rem;
 				}				
 
+				.label {
+					padding-right: 1.5rem;
+
+					@include device-width(3) {
+						width: 100%;
+						display: block;
+					}						
+				}						
 			}
 
 
@@ -196,13 +201,17 @@ body {
 
 
 			.link {
-				@include device-width(6) {
+				@media only screen and (max-width: 640px){	
 					font-size: 55%;
 				}
 
 				@include device-width(5) {
+					font-size: 80%;
+				}		
+
+				@media only screen and (max-width: 330px){	
 					font-size: 62.5%;
-				}				
+				}						
 			}
 		}
 
@@ -258,10 +267,9 @@ body {
 #front-page {
 
 	#homepage-scroller {
-		$ratio: 444 / 1156;
+		$ratio: 571 / 1396;
 		//min-height: $ratio * 1156px;
 		z-index: 100;
-		margin-bottom: 3em;
 
 		> .outer {
 			position: relative;
@@ -288,32 +296,15 @@ body {
 			background-repeat: no-repeat;
 
 			> .content {
-				position: absolute;
-				top: 0;
-				right: 0;
-				height: 100%;
-				width: 34%;
-				color: #FFF;
-				text-align: center;
+				max-width: 60%;
+				height: auto;				
+				margin: 0px auto;
 
-
-				&:before {
-					content: '';
-					display: inline-block;
-					height: 100%; 
-					vertical-align: middle;
-					margin-right: -0.25em;
+				img {
+					margin-top: 15%;
 				}
 
-				> .inner {
-					padding: 0 1em;
-					display: inline-block;
-					vertical-align: middle;
 
-					@include device-width(4) {
-						padding: 0;
-					}
-				}
 			}
 		}
 
@@ -322,15 +313,20 @@ body {
 	}
 
 	#content {
-		margin: 4em 0;
-		z-index: 200;
 
-		@include device-width(5) {
-			margin: 2em 0;
+		.span {
+			padding: 40px 10px;
+
+			@include device-width(5) {
+				padding: 20px 10px;
+			}
 		}
+	}
 
-		@include device-width(4) {
-			margin: 1em 0;
+	.bottom {
+
+		.row {
+			background: #ededed;
 		}
 	}
 }

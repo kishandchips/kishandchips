@@ -8,6 +8,7 @@
 
 @mixin avenir-roman {
 	font-family:'Avenir LT W01 55 Roman';
+	font-weight: normal;
 }
 
 .avenir-roman {
@@ -16,6 +17,7 @@
 
 @mixin avenir-black {
 	font-family:'Avenir LT W01 95 Black';
+	font-weight: normal;	
 }
 
 .avenir-black {
@@ -24,6 +26,7 @@
 
 @mixin avenir-heavy {
 	font-family:'Avenir LT W01 85 Heavy';
+	font-weight: normal;	
 }
 
 .avenir-heavy {
@@ -32,6 +35,7 @@
 
 @mixin avenir-medium {
 	font-family:'Avenir LT W01 65 Medium';
+	font-weight: normal;	
 }
 
 .avenir-medium {

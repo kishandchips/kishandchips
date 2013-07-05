@@ -336,6 +336,10 @@ body {
 	#key-principles {
 		background: #efefef;
 
+		@include device-width(7) {
+			padding-bottom: 40px;
+		}
+
 		.span {
 			padding: 40px 40px 40px 0;
 
@@ -384,6 +388,10 @@ body {
 			margin-top: 18px;
 			padding: 60px 20px;
 
+			@include device-width(6) {
+				padding: 20px;
+			}			
+
 			.image {
 				width: 25%;
 				float: left;
@@ -394,6 +402,7 @@ body {
 				} 
 
 				@include device-width(4) {
+					width: 50%;
 					float: none;
 					margin: 20px auto;
 				}
@@ -442,6 +451,7 @@ body {
 					} 
 
 					@include device-width(4) {
+						width: 50%;
 						float: none;
 						margin: 20px auto;
 					}					

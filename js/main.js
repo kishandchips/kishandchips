@@ -49,6 +49,7 @@
 		loaded: function(){
 			$('body').addClass('loaded');
 			this.equalHeight();
+			this.accordion();
 		},
 
 		lightbox: {
@@ -143,6 +144,35 @@
 					});
 				}
 			}
+		},
+
+		accordion: function() {
+			  var allPanels = $('.accordion, .acc-close').hide();
+			  var openBtn = $('.acc-open');
+  
+			  $('.acc-open').click(function(e) {
+			  	e.preventDefault();
+			    allPanels.slideUp();
+			    $(this).parent().parent().next('.accordion').slideDown();
+			    openBtn.show();
+			    $(this).hide();
+			    $(this).next('.acc-close').show();
+			    return false;
+			  });
+
+			  $('.acc-close').click(function(e) {
+			  	e.preventDefault();
+			  	$(this).parent().parent().next('.accordion').slideUp();
+			    $(this).hide();
+			    openBtn.show();
+			    return false;
+			  });
+
+			  $('.close-bottom .close-btn').click(function(e) {
+			  	e.preventDefault();
+			  	$('.acc-close').click();
+			  }); 
+
 		},
 
 		equalHeight: function(){

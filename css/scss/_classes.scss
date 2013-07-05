@@ -79,6 +79,7 @@ h4 {
 }
 
 h5 {
+	@include avenir-heavy;
 	margin: 0.5em 0;
 	@include font-size(18);
 	line-height: 1.3;
@@ -664,6 +665,16 @@ button {
 		padding: 0 0.1rem 0.3rem 2.8rem;
 	}
 
+	&.more-btn {
+		background: url('../images/icons/links_plus.png') left top no-repeat;
+		padding: 0 0.1rem 0.3rem 2.8rem;
+	}
+
+	&.close-btn {
+		background: url('../images/icons/links_close.png') left top no-repeat;
+		padding: 0 0.1rem 0.3rem 2.8rem;		
+	}
+
 	#content & {
 		@include avenir-heavy;
 		@include font-size(18);
@@ -755,7 +766,7 @@ button {
 .row {	
 	padding-top: 0;
 	padding-bottom: 0;
-	
+
 	> .inner {
 		margin-left: -10px;
 		margin-right: -10px;

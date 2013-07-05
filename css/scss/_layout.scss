@@ -479,4 +479,69 @@ body {
 	}
 }
 
+#capabilities {
+	padding-bottom: 65px;
+
+	.child-page {
+		margin:12px 0;
+		padding: 39px 32px;
+	    background-position: right top;
+	    background-repeat: no-repeat;
+	    @include background-size(contain);
+
+	    @include device-width(7) {
+	    	background-image: none !important;
+
+	    	.span {
+	    		width: 100%;
+	    	}
+	    }
+
+		.span {
+			padding: 0;
+		}	
+	}
+
+	.link {
+		@include font-size(14);
+		margin-top: 60px;
+	}
+
+	.close-bottom {
+		padding: 20px 30px 13px;
+		@include inline-block;
+		border-top: 1px solid #FFF;
+		margin-top: -12px;
+
+		.link {
+			margin: 0;
+		}
+	}		
+
+	.accordion > .inner {
+		margin:12px 0;
+		padding: 39px 32px;		
+	}
+
+	.odd {
+		.child-page, .close-bottom {
+			background-color: #ececec;
+		}
+
+		.accordion > .inner {
+			background-color: #efefef;
+		}
+	}
+
+	.even {
+		.child-page, .close-bottom {
+			background-color: #fbe88e;
+		}
+
+		.accordion > .inner {
+			background-color: #f9eba9;	
+		}		
+	} 
+}
+
 #error {}

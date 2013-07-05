@@ -518,17 +518,40 @@ body {
 		}
 	}		
 
-	.accordion > .inner {
+	.accordion {
+
+		> .inner {
 		margin:12px 0;
 		padding: 39px 32px;		
+
+			.span {
+				padding-right: 5%;
+			}
+		}
+
+		> .row {
+			padding: 39px 32px;
+			margin:12px 0;
+
+			.image {
+				width: 20%;
+				float: left;
+			}
+
+			.text {
+				overflow: hidden;
+			}
+		}
+
 	}
+
 
 	.odd {
 		.child-page, .close-bottom {
 			background-color: #ececec;
 		}
 
-		.accordion > .inner {
+		.accordion > .inner, .row {
 			background-color: #efefef;
 		}
 	}
@@ -538,7 +561,7 @@ body {
 			background-color: #fbe88e;
 		}
 
-		.accordion > .inner {
+		.accordion > .inner, .row {
 			background-color: #f9eba9;	
 		}		
 	} 

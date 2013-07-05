@@ -45,53 +45,15 @@ get_header(); ?>
 	<?php endif; ?>
 	
 	<div id="content">
-	<?php while ( have_posts() ) : the_post(); ?>
-		<?php if($post->post_content): ?>
-			<div class="page-content container">
-				<?php the_content(); ?>
-			</div>
+		<?php if(!$post->post_content == ''): ?>
+		<div class="page-content">
+			<?php the_content(); ?>
+		</div>
 		<?php endif; ?>
-		<?php if ( get_field('content_options', $post_id)) :?>
-			<?php $i = 0; ?>
-			<?php while (the_flexible_field('content_options', $post_id)) : ?>
-			<?php 
-				$layout = get_row_layout();
-				$background_image_id = get_sub_field('row_background_image');
-				$background_image = wp_get_attachment_image_src($background_image_id, 'full');
-			?>
-				<div class="row" style="<?php if($background_image) :?>background-image: url(<?php echo $background_image[0]; ?>);<?php endif; ?> background-color: <?php the_sub_field('row_background_color') ?>; <?php the_sub_field('row_css') ?>;">
-					<div class="container">
-					<?php if($layout == 'one_column'): ?>
-						<div class="column span ten">
-							<?php the_sub_field('content'); ?>
-						</div>
-					<?php endif; ?>
-					<?php if($layout == 'two_column'): ?>
-						<div class="column span five break-on-mobile" style="<?php the_sub_field('first_column_css'); ?>">
-							<?php the_sub_field('first_column_content'); ?>
-						</div>
-						<div class="column span five break-on-mobile" style="<?php the_sub_field('second_column_css'); ?>">
-							<?php the_sub_field('second_column_content'); ?>
-						</div>
-					<?php endif; ?>
-					<?php if($layout == 'three_column'): ?>
-						<?php if($title) :?><h2  class="row-title text-center"><?php echo $title; ?></h2><?php endif; ?>
-						<div class="column span one-third break-on-mobile" style="<?php the_sub_field('first_column_css'); ?>">
-							<?php the_sub_field('first_column_content'); ?>
-						</div>
-						<div class="column span one-third break-on-mobile" style="<?php the_sub_field('second_column_css'); ?>">
-							<?php the_sub_field('second_column_content'); ?>
-						</div>
-						<div class="column span one-third break-on-mobile" style="<?php the_sub_field('third_column_css'); ?>">
-							<?php the_sub_field('third_column_content'); ?>
-						</div>
-					<?php endif; ?>											
-					</div>
-				</div>
-			<?php $i++; ?>
-			<?php endwhile; ?>
-		<?php endif; ?>	
-	<?php endwhile; ?>			
+		<?php if ( get_field('content')):?>
+		<?php get_template_part('inc/content'); ?>
+		<?php endif; ?>
+		
 		<div class="bottom">
 			<div class="row">
 				<div class="container">

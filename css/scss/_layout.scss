@@ -312,21 +312,159 @@ body {
 		}
 	}
 
-	#content {
-
-		.span {
-			padding: 40px 10px;
-
-			@include device-width(5) {
-				padding: 20px 10px;
-			}
-		}
-	}
-
 	.bottom {
 
 		.row {
 			background: #ededed;
+		}
+	}
+}
+
+#content {
+
+	.span {
+		padding: 40px 10px;
+
+		@include device-width(5) {
+			padding: 20px 10px;
+		}
+	}
+}
+
+#about-us {
+
+	#key-principles {
+		background: #efefef;
+
+		.span {
+			padding: 40px 40px 40px 0;
+
+			@include device-width(7) {
+				padding: 40px 40px 0 0;	
+			}
+
+			@include device-width(5) {
+				padding: 40px 0 0 0;	
+			}			
+
+			&.third {
+				@include device-width(7) {
+					width: 50%;
+				}
+			}
+		}		
+
+		.image {
+			float: left; 
+			width: 24%;
+			margin-right: 5%;
+
+			@include device-width(5) {
+				width: 17%;
+			}
+		}
+
+		.text {
+			overflow: hidden;
+
+			h3 {
+				line-height: 1.1;
+				margin-top: 0;
+				margin-bottom: 0.8em;
+			}
+		}
+	}
+
+	#meet-the-team {
+		background: #f7f7f7;
+		padding:50px 0 80px;
+
+		.row {
+			background: url(../images/backgrounds/team_members.jpg) left top repeat;
+			margin-top: 18px;
+			padding: 60px 20px;
+
+			.image {
+				width: 25%;
+				float: left;
+				margin-left: 12%;
+
+				@include device-width(7) {
+					margin-left: 5%;
+				} 
+
+				@include device-width(4) {
+					float: none;
+					margin: 20px auto;
+				}
+			}
+
+			.text {
+				width: 40%;
+				float: right;
+				margin-right: 10%;
+
+				@include device-width(7) {
+					width: 55%;
+				} 				
+
+				@include device-width(4) {
+					float: none;
+					width: 100%;
+				}				
+
+				.name {
+					line-height: 0.3;
+				}
+
+				.position {
+					color: #fbd100;
+					@include font-size(14);
+					margin-bottom: 1em;
+				}
+
+				p {
+					@include font-size(14);
+					@include avenir-roman;
+					color: #545454;
+				}
+			}
+
+			&.even {
+				.image {
+					width: 25%;
+					float: right;
+					margin-left: 0;
+					margin-right: 12%;
+
+					@include device-width(7) {
+						margin-right: 5%;
+					} 
+
+					@include device-width(4) {
+						float: none;
+						margin: 20px auto;
+					}					
+
+				}
+
+				.text {
+					width: 40%;
+					float: left;
+					margin-right: 0;
+					margin-left: 10%;
+
+					@include device-width(7) {
+						width: 55%;
+					}
+
+					@include device-width(4) {
+						float: none;
+						width: 100%;
+						margin: 0;
+					}								
+				}				
+			}
 		}
 	}
 }

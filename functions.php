@@ -63,27 +63,25 @@ function kishandchips_setup() {
 		return 'class="prev-btn"';
 	}
 
-	// Create custom post types
+	//Create custom post types
 
-	// $celebrity_bear = new Custom_Post_Type( 'Celebrity Bear', 
- // 		array(
- // 			'rewrite' => array( 'with_front' => false, 'slug' => get_page_uri(get_kishandchips_option('celebrity_bear_page_id')) ),
- // 			'capability_type' => 'post',
- // 		 	'publicly_queryable' => true,
- //   			'has_archive' => true, 
- //    		'hierarchical' => false,
- //    		'exclude_from_search' => true,
- //    		'menu_position' => null,
- //    		'supports' => array('title', 'thumbnail', 'page-attributes'),
- //    		'plural' => 'Celebrity Bears'
- //   		)
- //   	);
-
+	$our_work = new Custom_Post_Type( 'Our Work', 
+ 		array(
+ 			'rewrite' => array( 'with_front' => false, 'slug' => get_page_uri(get_kishandchips_option('our_work_page_id'))),
+ 			'capability_type' => 'post',
+ 		 	'publicly_queryable' => true,
+   			'has_archive' => true, 
+    		'hierarchical' => false,
+    		'exclude_from_search' => false,
+    		'menu_position' => null,
+    		'supports' => array('title', 'thumbnail', 'editor'),
+    		'plural' => 'Our Works'
+   		)
+   	);
 	
- 	//global $wp_rewrite;
-	//$wp_rewrite->flush_rules();
+ 	global $wp_rewrite;
+	$wp_rewrite->flush_rules();
 	//add_rewrite_rule('case-studies/([^/]+)?', 'index.php?post_type=true&work=$matches[1]', 'top');
-   	//$shop->add_taxonomy('Shop Category', array('hierarchical' => true), array('plural' => 'Shop Categories'));
 
 	add_editor_style('css/editor-styles.css');
 

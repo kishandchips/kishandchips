@@ -11,8 +11,7 @@
  * @package kishandchips
  * @since kishandchips 1.0
  */
-global $parent_id;
-$parent_id = 32;
+
 get_header(); ?>
 
 <div id="index" class="container">

@@ -65,22 +65,22 @@ function kishandchips_setup() {
 
 	//Create custom post types
 
-	$our_work = new Custom_Post_Type( 'Our Work', 
+	$work_item = new Custom_Post_Type( 'Work Item', 
  		array(
- 			'rewrite' => array( 'with_front' => false, 'slug' => get_page_uri(get_kishandchips_option('our_work_page_id'))),
+ 			'rewrite' => array( 'with_front' => false, 'slug' => get_page_uri(get_kishandchips_option('work_page_id'))),
  			'capability_type' => 'post',
  		 	'publicly_queryable' => true,
    			'has_archive' => true, 
-    		'hierarchical' => false,
+    		'hierarchical' => true,
     		'exclude_from_search' => false,
     		'menu_position' => null,
     		'supports' => array('title', 'thumbnail', 'editor'),
-    		'plural' => 'Our Works'
+    		'plural' => 'Work'
    		)
    	);
 	
- 	global $wp_rewrite;
-	$wp_rewrite->flush_rules();
+ 	// global $wp_rewrite;
+	// $wp_rewrite->flush_rules();
 	//add_rewrite_rule('case-studies/([^/]+)?', 'index.php?post_type=true&work=$matches[1]', 'top');
 
 	add_editor_style('css/editor-styles.css');

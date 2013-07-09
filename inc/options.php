@@ -42,9 +42,9 @@ function theme_options_do_page() {
 
 			<table class="form-table">
 			
-				<tr valign="top"><th scope="row"><?php _e( 'Our Work Page ID', 'kishandchips' ); ?></th>
+				<tr valign="top"><th scope="row"><?php _e( 'Work Page ID', 'kishandchips' ); ?></th>
 					<td>
-						 <input id="kishandchips_theme_options[our_work_page_id]" class="regular-text" type="text" name="kishandchips_theme_options[our_work_page_id]" value="<?php esc_attr_e( $options['our_work_page_id'] ); ?>" />
+						 <input id="kishandchips_theme_options[work_page_id]" class="regular-text" type="text" name="kishandchips_theme_options[work_page_id]" value="<?php esc_attr_e( $options['work_page_id'] ); ?>" />
 					</td>
 				</tr>		
 
@@ -80,7 +80,7 @@ function theme_options_do_page() {
  * Sanitize and validate input. Accepts an array, return a sanitized array.
  */
 function theme_options_validate( $input ) {
-	$input['our_work_page_id'] = wp_filter_nohtml_kses( $input['our_work_page_id'] );
+	$input['work_page_id'] = wp_filter_nohtml_kses( $input['work_page_id'] );
 	$input['facebook_url'] = wp_filter_nohtml_kses( $input['facebook_url'] );
 	$input['twitter_url'] = wp_filter_nohtml_kses( $input['twitter_url'] );
 	$input['pinterest_url'] = wp_filter_nohtml_kses( $input['pinterest_url'] );

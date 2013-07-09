@@ -16,18 +16,15 @@ get_header(); ?>
 				$logo_id = get_field('item_logo');
 				$logo = wp_get_attachment_image_src($logo_id, 'full');
 			?>
-				<a href="<?php the_permalink(); ?>">
-					<div class="overlay"></div>
+				<a class="item overlay-btn" href="<?php the_permalink(); ?>">
 					<div class="work row clearfix">
 						<div class="span four info equal-height">
-							<div class="holder">
-								<div class="centerer">
-									<div class="logo">
-										<img src="<?php echo $logo[0]; ?>" alt="">
-									</div>
-									<div class="title"><?php the_field('item_sub_title')?></div>
-								</div>		
-							</div>
+							<div class="centerer valign-center">
+								<div class="logo">
+									<img src="<?php echo $logo[0]; ?>" alt="">
+								</div>
+								<div class="title"><?php the_field('item_sub_title')?></div>
+							</div>		
 						</div>
 						<div class="span six image equal-height">
 							<?php the_post_thumbnail('full', array('class' => 'scale')); ?>

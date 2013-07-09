@@ -570,6 +570,22 @@ body {
 	background: #f7f7f7;
 	padding: 70px 0;
 
+	.item {
+		position: relative;
+
+		.title {
+			color: #333;
+		}
+
+
+		&:hover {
+
+			.title {
+				color: #333;
+			}
+		}
+	}
+
 	.row.work {
 		background-color: #FFF;
 		margin-bottom: 15px;
@@ -583,24 +599,22 @@ body {
 			}
 		}
 
+
+
 		.info {
 			padding: 0 80px 30px;
 			text-align: center;
 
-
 			@include device-width(8) {
 				padding: 0;
+			}
+
+			@include device-width(6) {
+				margin-top: 20px;
 			}			
 
-			.holder {
-				display: table;
-				height: 100%;
-				width: 100%;
-
-				.centerer {
-					display: table-cell;
-					vertical-align: middle;
-				}
+			.logo {
+				margin-bottom: 10px;
 			}
 		}
 

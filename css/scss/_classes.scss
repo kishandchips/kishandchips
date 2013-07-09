@@ -651,6 +651,40 @@ blockquote {
 	}
 }
 
+.icon {
+	display: block;
+	color: #333333;
+	@include font-size(16);
+	@include avenir-heavy;
+	padding: 0 0.1rem 0.3rem 2.8rem;
+
+	&.home {
+		background: url('../images/icons/home.png') left 6px no-repeat;	
+	}
+
+	&.speech {
+		background: url('../images/icons/speech.png') left 6px no-repeat;		
+	}
+}
+
+.flex-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.flex-container iframe,   
+.flex-container object,  
+.flex-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* =============================================================================
    Lists
    ========================================================================== */
@@ -702,6 +736,11 @@ button {
 	&.close-btn {
 		background: url('../images/icons/links_close.png') left top no-repeat;
 		padding: 0 0.1rem 0.3rem 2.8rem;		
+	}
+
+	&.twitter {
+		background: url('../images/icons/twitter.png') left center no-repeat;
+		padding: 0 0.1rem 0.3rem 2.8rem;
 	}
 
 	#content & {

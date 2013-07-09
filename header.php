@@ -63,4 +63,4 @@
 			</div>
 		</div>
 	</header><!-- #header -->
-	<div id="main" class="site-main" role="main">
+	<div id="main" class="site-main clearfix" role="main">

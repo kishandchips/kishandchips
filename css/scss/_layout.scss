@@ -684,4 +684,86 @@ body {
 	}
 }
 
+#contact {
+
+	.sidebar {
+		background: #f7f7f7;
+		position: relative;
+		padding: 0;
+
+
+		.lead {
+			background: #fbe88e;
+
+			> .inner {
+				max-width: 270px;
+				padding: 60px 18% 50px;
+				float: right;
+
+				@include device-width(7) {
+					padding: 60px 10% 50px;
+				}
+
+				@include device-width(6) {
+					padding: 40px 5% 30px;
+				}
+
+				@include device-width(5) {
+					float: none;
+					max-width: 100%;
+				}		
+			}	
+		}
+
+		.information {
+			padding: 40px 18%;
+			float: right;
+			max-width: 270px;
+
+			@include device-width(7) {
+				padding: 40px 10%;
+			}
+
+			@include device-width(6) {
+				padding: 40px 5%;
+			}		
+
+			@include device-width(5) {
+				float: none;
+				max-width: 100%;
+			}				
+
+			.link, .icon {
+				margin-bottom: 15px;
+			}
+
+			.bottom {
+				@include font-size(16);
+				text-align: center;
+				margin: 180px 0 35px;
+				display: block;
+				max-width: 100%;
+
+				@include device-width(5) {
+					margin: 50px 0 35px;
+				}
+			}			
+		}
+
+		
+	}
+
+	.map {
+		background: url(../images/backgrounds/dark_squares.jpg) left top repeat;
+		padding-top: 10px;
+		padding: 0;
+		color: #FFF;
+
+		.inner {
+			// float: left;
+			max-width: 700px;
+		}
+	}
+}
+
 #error {}

@@ -75,7 +75,7 @@ function kishandchips_setup() {
     		'exclude_from_search' => false,
     		'menu_position' => null,
     		'supports' => array('title', 'thumbnail', 'editor'),
-    		'plural' => 'Work'
+    		'plural' => 'Our Work'
    		)
    	);
 	

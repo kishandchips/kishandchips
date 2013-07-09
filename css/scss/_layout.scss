@@ -602,7 +602,7 @@ body {
 
 
 		.info {
-			padding: 0 80px 30px;
+			padding: 0 6% 30px;
 			text-align: center;
 
 			@include device-width(8) {
@@ -611,7 +611,15 @@ body {
 
 			@include device-width(6) {
 				margin-top: 20px;
-			}			
+			}		
+
+			.centerer {
+				width: 70%;
+
+				@include device-width(8) {
+					width: 100%;
+				}
+			}	
 
 			.logo {
 				margin-bottom: 10px;
@@ -620,6 +628,58 @@ body {
 
 		.image {
 			padding-top: 30px;
+		}
+	}
+}
+
+#single-work {
+
+	.header {
+
+		.content {
+			$ratio: 252 / 1396;
+			padding-top: $ratio * 100%;
+			@include background-size(contain);
+			background-repeat: no-repeat;
+			text-align: center;
+			position: relative;
+
+			@include device-width(7) {
+				height: 80px;
+				@include background-size(auto);
+				background-position: center center;
+			}
+			
+			.vh-align-center {
+				width: 20%;
+
+				@include device-width(7) {
+					width: 200px;
+				}
+
+				img {
+					max-width: 100%;
+					height: auto;
+
+					@include device-width(7) {
+						width: 60%;
+					}
+				}
+			}
+		}
+	}
+
+	#content {
+		padding: 80px 0;
+		background: #f7f7f7;
+
+		@include device-width(6) {
+			padding: 40px 0;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
 		}
 	}
 }

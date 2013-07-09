@@ -21,7 +21,12 @@ get_header(); ?>
 						<div class="span four info equal-height">
 							<div class="centerer valign-center">
 								<div class="logo">
+								<?php if(get_field('item_logo') !=''): ?>
 									<img src="<?php echo $logo[0]; ?>" alt="">
+								<?php else :?>
+									<h4 class="title"><?php the_title(); ?></h4> 
+								<?php endif;?>
+																		
 								</div>
 								<div class="title"><?php the_field('item_sub_title')?></div>
 							</div>		

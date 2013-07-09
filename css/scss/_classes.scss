@@ -354,6 +354,21 @@ a.light-brown:hover {
 	}
 }
 
+.halign-center {
+	position: absolute;
+	left: 50%;
+	@include translateX(-50%);
+}
+
+.vh-align-center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	@include translate(-50%, -50%);
+}
+
+
+
 .dropshadow {
 	@include box-shadow(3px 3px 4px #666 );
 	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#666666')";

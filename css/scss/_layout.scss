@@ -109,6 +109,10 @@ body {
 			margin-top: 30px;
 		}
 
+		@include device-width(4) {
+			display: none;
+		}		
+
 
 		> ul {
 			margin: 0;
@@ -766,4 +770,98 @@ body {
 	}
 }
 
+#project-planner {
+
+	.first-row, .third-row{
+		background: #f1f1f1;
+	}
+
+	.second-row, .fourth-row {
+		background: #f7f7f7;
+	}
+
+	.gform_page_footer {
+		display: none;
+
+		.button.gform_next_button, .button.gform_previous_button {
+			display: none;
+		}
+	}
+
+	.second-row {
+		.gfield_label {
+			@include font-size(20);
+			margin-bottom: 25px;
+		}
+	}	
+
+	.fourth-row .gform_page_footer  {
+		display: block;
+		margin: 0;
+		padding: 0;
+		border: none;
+		text-align: center;
+	}	
+
+
+	.gform_wrapper {
+		margin: 0;
+
+		.gf_page_steps {
+			display: none;
+		}
+
+		.gform_body {
+
+			.gf_step {
+				@include avenir-heavy;
+				@include font-size(30);
+				color: #333333 !important;
+				opacity: 1 !important;
+				margin-bottom: 40px;
+
+				.gf_step_number {
+					display: none;
+				}
+			}
+
+			.gform_page_fields:before, .gform_page_fields:after  {
+			    content: " "; /* 1 */
+    			display: table; /* 2 */
+    		}
+
+    		.gform_page_fields:after {
+    			clear: both;
+    		}
+
+			.gform_page_fields {
+				padding: 60px 0;
+				width: 90%;
+				max-width: 1100px;
+				margin-left: auto;
+				margin-right: auto;
+				position: relative;
+				*zoom: 1;
+
+				@include device-width(7) {
+					width: 95%;
+				}
+			}
+
+			ul {
+
+				li {
+
+					&.gfield {
+						clear: none;
+					}
+				}
+			}
+
+			.gform_page {
+				display: block !important;
+			}
+		}
+	}
+}
 #error {}

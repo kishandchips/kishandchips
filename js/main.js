@@ -41,6 +41,17 @@
 				$('.main-navigation', header).slideToggle(200);
 			});
 
+			var projectplannerForm = $('#project-planner');
+			if(projectplannerForm.length > 0){
+				$('.gf_page_steps .gf_step', projectplannerForm).each(function(){
+					var step = $(this),
+						pageId = step.attr('id').replace('gf_step_', '');
+
+					$('.gform_body #gform_page_' + pageId + ' .gform_page_fields', projectplannerForm).prepend(step);
+				});
+			}
+			
+
 			$(window).resize(this.resize);
 			this.resize();
 

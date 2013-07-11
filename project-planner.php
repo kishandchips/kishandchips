@@ -24,7 +24,8 @@ get_header(); ?>
  	
 	$("#slider").rangeSlider({
 		bounds:{min: 2, max: 15},
-		defaultValues:{min: 3, max: 8}
+		defaultValues:{min: 3, max: 8},
+		step: 0.1
 	});
 	$("#dateSlider").dateRangeSlider({
 		bounds:{
@@ -36,6 +37,17 @@ get_header(); ?>
 			max: new Date(2013, 9, 10)
 		}
 	});
+
+    $("#dateSlider").bind("valuesChanged", function(e, data){
+		$('#input_1_15').val(data.values.min);
+		$('#input_1_16').val(data.values.max);    
+    });
+
+    $("#slider").bind("valuesChanged", function(e, data){
+		$('#input_1_12').val(data.values.min);
+		$('#input_1_14').val(data.values.max);
+    });    
+
 </script>	
 	
 </div><!-- #page -->

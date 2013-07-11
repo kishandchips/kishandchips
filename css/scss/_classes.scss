@@ -1152,9 +1152,19 @@ fieldset {
 		}
 	}
 
-// 	.validation_error {
-// 		color: #a40000;
-// 	}
+	.validation_message, .gfield_required {
+		color: #DA0000 !important
+	}
+
+ 	div.validation_error {
+		margin: 0 !important;
+		padding: 15px;
+		text-align: center;
+		background: none repeat scroll 0 0 #DA0000;
+		color: #FFFFFF !important;
+		font-size: 1.2em;
+		font-weight: bold;    
+ 	}
 
  	.gform_body {
 
@@ -1193,14 +1203,14 @@ fieldset {
 // 				}
 
 				&.gfield_error {
-					margin: 0 !important;
-					padding: 0 !important;
+					margin-top: 0 !important;
+					padding-top: 0 !important;
 					background: none;
 					border: none;
 
 					&.gfield_contains_required {
-						margin: 0 !important;
-						padding: 0 !important;
+						margin-top: 0 !important;
+						padding-top: 0 !important;
 					}
 
 					&.gf_left_half {
@@ -1210,6 +1220,10 @@ fieldset {
 					.ginput_container {
 						margin: 0 !important;
 						max-width: 100%;
+					}
+
+					.gfield_label {
+						color: #DA0000 !important;
 					}
 				}
 

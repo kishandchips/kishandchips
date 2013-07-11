@@ -18,15 +18,24 @@ get_header(); ?>
 	
 	
  <script>
- 	$('.fourth-row .gform_page_fields').append('<div id="dateSlider"></div>');
- 	$('.fourth-row .gform_page_fields').append('<div id="slider"></div>');
+
+ 	$('.fourth-row .gform_page_fields').append('<li class="gfield"><label class="gfield_label">When do you need to carry out this project?</label><div id="dateSlider"></div></div><li>');
+ 	$('.fourth-row .gform_page_fields').append('<li class="gfield"><label class="gfield_label">What budget is available for this project?</label><div id="slider"></div></li>');
  	
-	$("#slider").rangeSlider();
+	$("#slider").rangeSlider({
+		bounds:{min: 2, max: 15},
+		defaultValues:{min: 3, max: 8}
+	});
 	$("#dateSlider").dateRangeSlider({
 		bounds:{
-		min: new Date(2013, 7, 1),
-		max: new Date(2013, 12, 31)
-	}});
+			min: new Date(2013, 7, 1),
+			max: new Date(2013, 12, 31)
+		},
+		 defaultValues:{
+			min: new Date(2013, 7, 11),
+			max: new Date(2013, 9, 10)
+		}
+	});
 </script>	
 	
 </div><!-- #page -->

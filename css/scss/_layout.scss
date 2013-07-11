@@ -795,12 +795,23 @@ body {
 		}
 	}	
 
-	.fourth-row .gform_page_footer  {
-		display: block;
-		margin: 0;
-		padding: 0;
-		border: none;
-		text-align: center;
+	.fourth-row {
+		.gform_fields {
+			display: none;
+		}
+
+		.gform_page_footer  {
+			display: block;
+			margin: 0;
+			padding: 0;
+			border: none;
+			text-align: center;
+		}
+
+		.ui-rangeSlider {
+			margin-top: 70px;
+			margin-bottom: 50px;
+		}
 	}	
 
 

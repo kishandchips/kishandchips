@@ -16,6 +16,11 @@ get_header(); ?>
 <section id="front-page" class="clearfix">
 	<?php if ( get_field('slides')) :?>
 		<div id="homepage-scroller" class="scroller" data-auto-scroll="true" >
+			<div class="header">
+				<div class="inner">
+					<?php _e('Kish & Chips : Digital Architects'); ?>
+				</div>
+			</div>
 			<div class="outer">
 				<div class="inner">
 					<div class="scroller-mask">

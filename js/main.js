@@ -174,11 +174,16 @@
 		},
 
 		accordion: function() {
-			  var allPanels = $('.accordion, .acc-close').hide();
-			  var openBtn = $('.acc-open');
-  
-			  $('.acc-open').click(function(e) {
+			  	var allPanels = $('.accordion, .acc-close').hide();
+			  	var openBtn = $('.acc-open');
+
+				$(document).on('click', '.acc-open', function(e) {
 			  	e.preventDefault();
+			  	scrollPosition = ($(this).parent().offset().top);
+			  	console.log(scrollPosition);
+			  	$('html, body').animate({scrollTop: scrollPosition}, 300);
+
+
 			    allPanels.slideUp();
 			    $(this).parent().parent().next('.accordion').slideDown();
 			    openBtn.show();
@@ -190,6 +195,7 @@
 			  $('.acc-close').click(function(e) {
 			  	e.preventDefault();
 			  	$(this).parent().parent().next('.accordion').slideUp();
+			  	$('html, body').animate({scrollTop: scrollPosition}, 300);
 			    $(this).hide();
 			    openBtn.show();
 			    return false;

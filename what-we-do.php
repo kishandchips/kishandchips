@@ -42,12 +42,10 @@ get_header(); ?>
 				            </div>
 				        </div>
 				        <div class="accordion hide">
-				        	
-				        	
-				        		<?php // Custom Content Layout ?>
-								<?php $id = (isset($id)) ? $id : $post->ID; ?>
-								<?php $i = 0; ?>
-								<?php if(get_field('content', $id)): ?>
+			        		<?php // Custom Content Layout ?>
+							<?php $id = (isset($id)) ? $id : $post->ID; ?>
+							<?php $i = 0; ?>
+							<?php if(get_field('content', $id)): ?>
 								<div class="inner">
 								<?php while (has_sub_field('content', $id)) : ?>
 								<?php 
@@ -91,6 +89,26 @@ get_header(); ?>
 														} ?>
 														<div class="break-on-mobile span <?php if( get_sub_field('hide_on_mobile', $curr_page->ID) == true ) { ?>hide-on-mobile<?php } ?> <?php echo $class; ?>" style="<?php the_sub_field('css'); ?>; background-image: url(<?php echo $col_background_image[0]; ?>);">
 															<?php the_sub_field('content'); ?>
+
+															<?php if(get_sub_field('list_item_with_icon')): ?>
+																<ul class="icon-list">
+																<?php while (has_sub_field('list_item_with_icon', $id)) : ?>
+																	<?php 
+																		$list_item_with_icon_image_id = get_sub_field('item_icon');
+																		$list_item_with_icon_image = wp_get_attachment_image_src($list_item_with_icon_image_id, 'full');
+																	?>	
+																	<li style="background-image: url(<?php echo $list_item_with_icon_image[0]; ?>);">
+																		<div class="item-title">
+																			<?php the_sub_field('item_title'); ?>	
+																		</div>
+																		<div class="item-content">
+																			<?php the_sub_field('item_content'); ?>
+																		</div>
+																	</li>
+																<?php endwhile; ?>
+																</ul>
+															<?php endif; ?>
+
 														</div>
 													<?php endwhile; ?>
 												</div>					
@@ -119,31 +137,34 @@ get_header(); ?>
 											<?php endif; ?>
 											<?php break; ?>
 
-									<?php } ?>
+										<?php } ?>
 
-								<?php $i++; ?>
-								<?php endwhile; ?>
-								</div>
+									<?php $i++; ?>
+									<?php endwhile; ?>
+									</div>
 								<?php endif; ?>	
 								
 								<?php // Content of Capabilities Repeater Field ?>
-								<?php while (has_sub_field('capability_rows', $id)) : ?>
-									<div class="row clearfix">
-										<?php 
-											$cap_image_id = get_sub_field('image');
-											$cap_image = wp_get_attachment_image_src($cap_image_id, 'full');
-										?>
-											<?php if(get_sub_field('image') !='') :?>
-												<div class="image">
-													<img src="<?php echo $cap_image[0]; ?>" alt="">	
+								<?php if(get_field('capability_rows', $id)): ?>
+									<?php while (has_sub_field('capability_rows', $id)) : ?>
+										<div class="row clearfix">
+											<?php 
+												$cap_image_id = get_sub_field('image');
+												$cap_image = wp_get_attachment_image_src($cap_image_id, 'full');
+											?>
+												<?php if(get_sub_field('image') !='') :?>
+													<div class="image">
+														<img src="<?php echo $cap_image[0]; ?>" alt="">	
+													</div>
+												<?php endif; ?>
+												<div class="text">
+													<h3 class="name"><?php the_sub_field('title'); ?></h3>
+													<p><?php the_sub_field('description'); ?></p>
 												</div>
-											<?php endif; ?>
-											<div class="text">
-												<h3 class="name"><?php the_sub_field('title'); ?></h3>
-												<p><?php the_sub_field('description'); ?></p>
-											</div>
-									</div>				
-								<?php endwhile; ?>												
+										</div>				
+									<?php endwhile; ?>		
+								<?php endif; ?>		
+
 					        <div class="close-bottom">
 					        	<a href="" class="link close-btn">Close</a>
 					        </div>

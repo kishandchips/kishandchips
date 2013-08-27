@@ -533,7 +533,7 @@ body {
 		padding: 20px 30px 13px;
 		@include inline-block;
 		border-top: 1px solid #FFF;
-		margin-top: -12px;
+		margin-top: -11px;
 
 		.link {
 			margin: 0;
@@ -543,7 +543,7 @@ body {
 	.accordion {
 
 		> .inner {
-		margin:12px 0;
+		margin-bottom: 12px;
 		padding: 39px 32px;		
 
 			.row-title {
@@ -558,7 +558,7 @@ body {
 		}
 
 		> .row {
-			margin:12px 0;
+			margin-bottom: 12px;
 
 			.image {
 				width: 18%;

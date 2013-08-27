@@ -277,16 +277,19 @@ body {
 			top: 8%;
 			width: 100%;
 		    z-index: 10;			
+			@include caecilia;
+			@include font-size(30);
+			text-align: center;
 
-			.inner {
-				margin: 0 auto;
-			    background-image: url(../images/logos/kc_da.png);
-			    width: 441px;
-			    height: 31px;
-			    @include background-size(cover); 
-			    overflow: hidden;
-			    text-indent: -9999px;
-			}
+			@include device-width(8) {
+				@include font-size(25);
+			}				
+
+			@include device-width(6) {
+				@include font-size(20);
+			}				
+
+
 		}
 
 		> .outer {
@@ -305,6 +308,10 @@ body {
 
 		.scroller-mask {
 			height: 100%;
+		}
+
+		.scroller-navigation {
+			display: none;
 		}
 	
 		.scroll-item {
@@ -329,11 +336,18 @@ body {
 		.scroller-navigation {
 		}
 	}
+	
+	#content {
 
-	.bottom {
+		.top-border {
+			height: 12px;
+			background-color: #222222;
+			@include filter-gradient(#222222, #fbe88e, horizontal);
+			@include background-image(linear-gradient(left,  #222222 0%,#222222 50%,#fbe88e 50%,#fbe88e 100%));
+		}
 
-		.row {
-			background: #ededed;
+		.container {
+			max-width: 910px;
 		}
 	}
 }
@@ -402,27 +416,22 @@ body {
 		padding:50px 0 80px;
 
 		.row {
-			background: url(../images/backgrounds/team_members.jpg) left top repeat;
+			background: #FFF;
 			margin-top: 18px;
-			padding: 60px 20px;
-
-			@include device-width(6) {
-				padding: 20px;
-			}			
+			padding: 15px;		
 
 			.image {
-				width: 25%;
+				width: 47%;
 				float: left;
-				margin-left: 12%;
 
 				@include device-width(7) {
-					margin-left: 5%;
+					width: 40%;
 				} 
 
 				@include device-width(4) {
-					width: 50%;
+					width: 100%;
 					float: none;
-					margin: 20px auto;
+					margin: 0px auto 20px auto;
 				}
 			}
 
@@ -433,6 +442,7 @@ body {
 
 				@include device-width(7) {
 					width: 55%;
+					margin-right: 0;
 				} 				
 
 				@include device-width(4) {
@@ -459,17 +469,10 @@ body {
 
 			&.even {
 				.image {
-					width: 25%;
 					float: right;
 					margin-left: 0;
-					margin-right: 12%;
-
-					@include device-width(7) {
-						margin-right: 5%;
-					} 
 
 					@include device-width(4) {
-						width: 50%;
 						float: none;
 						margin: 20px auto;
 					}					
@@ -484,6 +487,7 @@ body {
 
 					@include device-width(7) {
 						width: 55%;
+						margin-left: 0;
 					}
 
 					@include device-width(4) {
@@ -541,6 +545,12 @@ body {
 		> .inner {
 		margin:12px 0;
 		padding: 39px 32px;		
+
+			.row-title {
+				@include avenir-heavy;
+				font-size: 1.6rem;
+				margin-bottom: 1em;
+			}
 
 			.span {
 				padding-right: 5%;

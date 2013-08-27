@@ -16,16 +16,11 @@ get_header(); ?>
 <section id="front-page" class="clearfix">
 	<?php if ( get_field('slides')) :?>
 		<div id="homepage-scroller" class="scroller" data-auto-scroll="true" >
-			<div class="header">
-				<div class="inner">
-					<?php _e('Kish & Chips : Digital Architects'); ?>
-				</div>
-			</div>
 			<div class="outer">
 				<div class="inner">
 					<div class="scroller-mask">
 						<?php $i = 0; ?>
-						<?php while (the_repeater_field('slides')) : ?>
+						<?php while (the_repeater_field('slides')) : ?>					
 						<?php 
 							$image_id = get_sub_field('image_id');
 							$image = wp_get_attachment_image_src($image_id, 'slide');
@@ -33,6 +28,14 @@ get_header(); ?>
 							$background_image = wp_get_attachment_image_src($background_image_id, 'full');    			
 						?>
 						<div class="scroll-item <?php if($i == 0) echo 'current'; ?>" data-id="<?php echo $i;?>" style="background-image: url(<?php echo $background_image[0]; ?>);">
+							<div class="header">
+								<span style="color: <?php echo get_sub_field('kc_color'); ?>">
+									<?php _e('Kish & Chips :'); ?>
+								</span>
+								<span style="color: <?php the_sub_field( 'digital_color' ); ?>">
+									<?php _e('Digital Architects'); ?>
+								</span>				
+							</div>	
 							<div class="content container">
 								<img class="scale" src="<?php echo $image[0]; ?>" alt="">
 							</div>
@@ -50,6 +53,7 @@ get_header(); ?>
 	<?php endif; ?>
 	
 	<div id="content">
+		<div class="top-border"></div>
 		<?php if(!$post->post_content == ''): ?>
 		<div class="page-content">
 			<?php the_content(); ?>
@@ -58,19 +62,6 @@ get_header(); ?>
 		<?php if ( get_field('content')):?>
 		<?php get_template_part('inc/content'); ?>
 		<?php endif; ?>
-		
-		<div class="bottom">
-			<div class="row">
-				<div class="container">
-					<div class="column span five break-on-mobile">
-					quotes
-					</div>
-					<div class="column span five break-on-mobile">
-					twitter
-					</div>				
-				</div>
-			</div>
-		</div>	
 	</div>
 
 </section><!-- #front-page -->

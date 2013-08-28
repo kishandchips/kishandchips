@@ -796,6 +796,7 @@ button {
 .overlay-btn {
 	position: relative;
 	display: block;
+
 	&:after {
 		@include transition(all 0.3s ease);
 		@include box-sizing(border-box);
@@ -808,7 +809,10 @@ button {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: rgba(#fbea99, 0.8);
+		// background: rgba(#fbea99, 0.8);
+		@include filter-gradient(rgba(#fbea99, 0.4), rgba(#fbea99, 1), vertical); // IE6-9
+		@include background-image(linear-gradient(top,  rgba(#fbea99, 0.4) 0%,rgba(#fbea99, 1) 100%));
+
 		z-index: 200;
 		color: #333;
 		text-align: center;

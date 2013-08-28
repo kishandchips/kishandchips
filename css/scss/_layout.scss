@@ -177,6 +177,8 @@ body {
 #footer {
 	@include box-shadow(-2px -2px 3px #C6C6C6);
 	border-bottom: 1px solid #FFF;
+	position: relative;
+	z-index: 500;
 	
 	> .top {
 		> .inner {
@@ -364,6 +366,7 @@ body {
 }
 
 #about-us {
+	background: #f7f7f7;
 
 	#key-principles {
 		background: #efefef;
@@ -402,11 +405,12 @@ body {
 
 		.text {
 			overflow: hidden;
+			@include avenir-roman;
 
 			h3 {
 				line-height: 1.1;
 				margin-top: 0;
-				margin-bottom: 0.8em;
+				margin-bottom: 0.6em;
 			}
 		}
 	}
@@ -501,6 +505,11 @@ body {
 	}
 }
 
+#what-we-do {
+	background: #f7f7f7;
+	padding-top: 30px;
+}
+
 #capabilities {
 	padding-bottom: 65px;
 
@@ -510,6 +519,11 @@ body {
 	    background-position: right top;
 	    background-repeat: no-repeat;
 	    @include background-size(contain);
+
+	    p {
+	    	@include avenir-roman;
+	    	line-height: 1.5;
+	    }
 
 	    @include device-width(7) {
 	    	background-image: none !important;
@@ -897,6 +911,7 @@ body {
 				color: #333333 !important;
 				opacity: 1 !important;
 				margin-bottom: 40px;
+				line-height: 1em !important;
 
 				.gf_step_number {
 					display: none;

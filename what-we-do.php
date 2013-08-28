@@ -12,18 +12,18 @@ get_header(); ?>
 		<title></title>
 	</head>
 	<body>
-		<div id="about-us">
+		<div id="what-we-do">
 			<div id="content" <?php post_class(); ?>>
 				<?php while ( have_posts() ) : the_post(); ?><?php if ( !$post->post_content == '' ): ?>
 				<div class="page-content">
-					<?php the_content(); ?>
+					<div class="container">
+						<?php the_content(); ?>
+					</div>
 				</div><?php endif; ?><?php if ( get_field( 'content' ) ):?><?php get_template_part( 'inc/content' ); ?><?php endif; ?><?php endwhile; // end of the loop. ?>
 			</div>
 			<div id="capabilities">
 				<div class="container">
-					<h2>
-						Capabilities
-					</h2><?php
+					<?php
 					$args = array( 'post_type' => 'page', 'posts_per_page' => -1, 'post_parent' => $post->ID, 'order' => 'ASC', 'orderby' => 'menu_order' );
 					$parent = new WP_Query( $args );
 

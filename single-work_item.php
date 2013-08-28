@@ -30,6 +30,21 @@ get_header(); ?>
 				<?php the_content(); ?>
 			</div>
 		</div>
+		<?php if(get_field('project_description') !=''): ?>
+		<div class="description">
+			<div class="container">
+				<div class="span six push-two">
+					<h4 class="title"><?php the_field('project_title')?></h4>
+					<p><?php the_field('project_description')?></p>
+
+					<?php if(get_field('project_website') !=''): ?>
+						<a class="link" href="<?php the_field('project_website')?>" target="_blank"><?php _e('Visit website')?></a>
+					<?php endif;?>
+					<a class="link back-btn right" href="<?php echo get_permalink(11); ?>"><?php _e('Back to Projects')?></a>
+				</div>
+			</div>
+		</div>
+		<?php endif;?>
 	</div>
 </div><!-- #page -->
 <?php get_footer(); ?>

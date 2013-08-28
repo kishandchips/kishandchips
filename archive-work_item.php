@@ -18,20 +18,19 @@ get_header(); ?>
 			?>
 				<a class="item overlay-btn" href="<?php the_permalink(); ?>">
 					<div class="work row clearfix">
-						<div class="span four info equal-height">
+						<div class="span four info">
 							<div class="centerer valign-center">
 								<div class="logo">
-								<?php if(get_field('item_logo') !=''): ?>
-									<img src="<?php echo $logo[0]; ?>" alt="">
-								<?php else :?>
-									<h4 class="title"><?php the_title(); ?></h4> 
-								<?php endif;?>
-																		
+									<?php if(get_field('item_logo') !=''): ?>
+										<img src="<?php echo $logo[0]; ?>" alt="">
+									<?php else :?>
+										<h4 class="title"><?php the_title(); ?></h4> 
+									<?php endif;?>															
 								</div>
 								<div class="title"><?php the_field('item_sub_title')?></div>
 							</div>		
 						</div>
-						<div class="span six image equal-height">
+						<div class="span six image right">
 							<?php the_post_thumbnail('full', array('class' => 'scale')); ?>
 						</div>
 					</div>

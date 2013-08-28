@@ -26,6 +26,5 @@ get_header(); ?>
 		<?php endif; ?>
 	</div>
 	<?php endwhile; // end of the loop. ?>
-
 </div><!-- #page -->
 <?php get_footer(); ?>

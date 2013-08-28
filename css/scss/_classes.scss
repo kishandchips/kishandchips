@@ -344,7 +344,7 @@ a.light-brown:hover {
 
 .valign-center {
 	position: absolute;
-	top: 50%;
+	top: 42%;
 	@include translateY(-50%);
 
 	@include device-width(6) {
@@ -741,6 +741,11 @@ button {
 	&.twitter {
 		background: url('../images/icons/twitter.png') left center no-repeat;
 		padding: 0 0.1rem 0.3rem 2.8rem;
+	}
+
+	&.back-btn {
+		background: url('../images/icons/menu.png') left 7px no-repeat;
+		padding: 0 0.1rem 0.3rem 2.8rem;		
 	}
 
 	#content & {

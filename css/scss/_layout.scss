@@ -654,6 +654,7 @@ body {
 
 		.title {
 			color: #333;
+			padding: 0 20px;
 		}
 
 
@@ -674,7 +675,7 @@ body {
 			padding:15px 0 0 0;
 
 			.span {
-				width: 100%;
+				width: 100%;			
 			}
 		}
 
@@ -683,12 +684,15 @@ body {
 		.info {
 			padding: 0 6% 30px;
 			text-align: center;
+			position: absolute;
+			height: 100%;
 
 			@include device-width(8) {
 				padding: 0;
 			}
 
 			@include device-width(6) {
+				position: relative;
 				margin-top: 20px;
 			}		
 
@@ -759,6 +763,45 @@ body {
 		img {
 			max-width: 100%;
 			height: auto;
+		}
+	}
+
+	.description {
+		background: #efefef;
+		padding: 80px 0 220px;
+		text-align: justify;
+
+		@include device-width(9) {
+			padding: 10% 0 15%;
+		}		
+
+		@include device-width(5) {
+			padding: 10% 0 20%;
+		}
+
+		.span {
+			@include device-width(5) {
+				width: 100% !important;
+				margin: 0 !important;
+			}
+		}
+
+		.title {
+			@include avenir-black;
+			@include font-size(18);
+			line-height: 1.5;
+			margin-top: 20px;
+		}
+
+		p {
+			color: #5e5e5e;
+			@include font-size(13);
+		  	line-height: 1.7;
+		}
+
+		.link {
+			margin-top: 45px;
+			@include font-size(18);
 		}
 	}
 }

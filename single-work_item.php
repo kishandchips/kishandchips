@@ -10,6 +10,10 @@ get_header(); ?>
 <?php 
 	$logo_id = get_field('item_logo');
 	$logo = wp_get_attachment_image_src($logo_id, 'full');
+
+	$single_logo_id = get_field('item_logo_single');
+	$single_logo = wp_get_attachment_image_src($single_logo_id, 'full');	
+
 	$header_id = get_field('header_image_id');
 	$header_image = wp_get_attachment_image_src($header_id, 'full');
 ?>
@@ -17,15 +21,22 @@ get_header(); ?>
 	<div class="header" style="background-color: <?php the_field('header_background_color')?>;">
 		<div class="content" style="background-image: url(<?php echo $header_image[0]; ?>);">
 			<div class="vh-align-center">
-				<?php if(get_field('item_logo') !=''): ?>
-					<img src="<?php echo $logo[0]; ?>" alt="">
+				<?php if(get_field('item_logo_single') !=''): ?>
+					<img src="<?php echo $single_logo[0]; ?>" alt="">
 				<?php else :?>
-					<h4 class="title"><?php the_title(); ?></h4> 
+					<?php if(get_field('item_logo') !=''): ?>
+						<img src="<?php echo $logo[0]; ?>" alt="">
+					<?php else :?>
+						<h4 class="title"><?php the_title(); ?></h4> 
+					<?php endif;?>	
 				<?php endif;?>		
-				<div class="title"><?php the_field('item_sub_title')?></div>	
+				<div class="title" style="color: <?php the_field('item_sub_title_color')?>"><?php the_field('item_sub_title')?></div>	
 			</div>
 		</div>
 		<div id="content">
+			<a class="link back-btn right floatbtn" href="<?php echo get_permalink(11); ?>" title="<?php _e('Back to Projects')?>">
+				<?php _e('Back to Projects')?>
+			</a>
 			<div class="container">
 				<?php the_content(); ?>
 			</div>
@@ -40,7 +51,7 @@ get_header(); ?>
 					<?php if(get_field('project_website') !=''): ?>
 						<a class="link" href="<?php the_field('project_website')?>" target="_blank"><?php _e('Visit website')?></a>
 					<?php endif;?>
-					<a class="link back-btn right" href="<?php echo get_permalink(11); ?>"><?php _e('Back to Projects')?></a>
+					<a class="link back-btn <?php if(get_field('project_website') !=''): ?> right <?php endif;?>" href="<?php echo get_permalink(11); ?>"><?php _e('Back to Projects')?></a>
 				</div>
 			</div>
 		</div>

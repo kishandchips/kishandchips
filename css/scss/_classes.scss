@@ -748,6 +748,30 @@ button {
 		padding: 0 0.1rem 0.3rem 2.8rem;		
 	}
 
+	&.floatbtn {
+		background: url('../images/icons/menu_gray.png') left 7px no-repeat;
+		position: absolute;
+		top: 90px;
+		left: 15px;
+		color: #a5a5a5;
+		border-bottom: 2px solid #dfdfdf;
+		z-index: 5;
+
+		&:hover {
+			color: #333;
+		}
+
+		@include device-width(11) {
+			text-indent: -9999px;
+			border-bottom: none;
+		}
+
+		@include device-width(7) {
+			display: none;
+		}		
+
+	}
+
 	#content & {
 		@include avenir-heavy;
 		@include font-size(18);

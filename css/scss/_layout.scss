@@ -720,7 +720,7 @@ body {
 	.header {
 
 		.content {
-			$ratio: 252 / 1396;
+			$ratio: 249 / 1396;
 			padding-top: $ratio * 100%;
 			@include background-size(contain);
 			background-repeat: no-repeat;
@@ -731,6 +731,11 @@ body {
 				height: 80px;
 				@include background-size(auto);
 				background-position: center center;
+			}
+
+			.title {
+				@include avenir-roman;
+				margin-top: 10px;
 			}
 			
 			.vh-align-center {
@@ -755,6 +760,7 @@ body {
 	#content {
 		padding: 80px 0;
 		background: #f7f7f7;
+		position: relative;
 
 		@include device-width(6) {
 			padding: 40px 0;

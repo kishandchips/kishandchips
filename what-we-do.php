@@ -14,20 +14,28 @@ get_header(); ?>
 	<body>
 		<div id="what-we-do">
 			<div id="content" <?php post_class(); ?>>
-				<?php while ( have_posts() ) : the_post(); ?><?php if ( !$post->post_content == '' ): ?>
-				<div class="page-content">
-					<div class="container">
-						<?php the_content(); ?>
-					</div>
-				</div><?php endif; ?><?php if ( get_field( 'content' ) ):?><?php get_template_part( 'inc/content' ); ?><?php endif; ?><?php endwhile; // end of the loop. ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php if ( !$post->post_content == '' ): ?>
+						<div class="page-content">
+							<div class="container">
+								<?php the_content(); ?>
+							</div>
+						</div>
+					<?php endif; ?>
+					<?php if ( get_field( 'content' ) ):?>
+						<?php get_template_part( 'inc/content' ); ?>
+					<?php endif; ?>
+				<?php endwhile; // end of the loop. ?>
 			</div>
 			<div id="capabilities">
 				<div class="container">
 					<?php
-					$args = array( 'post_type' => 'page', 'posts_per_page' => -1, 'post_parent' => $post->ID, 'order' => 'ASC', 'orderby' => 'menu_order' );
-					$parent = new WP_Query( $args );
-
-					if ( $parent->have_posts() ) : ?><?php while ( $parent->have_posts() ) : $parent->the_post(); ?><?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>
+						$args = array( 'post_type' => 'page', 'posts_per_page' => -1, 'post_parent' => $post->ID, 'order' => 'ASC', 'orderby' => 'menu_order' );
+						$parent = new WP_Query( $args );
+					?>						
+					<?php if ( $parent->have_posts() ) : ?>
+					<?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
+					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>
 					<div id="child-<?php the_ID(); ?>" class="outer <?php echo ( ++$j % 2 == 0 ) ? 'even' : 'odd'; ?>">
 						<div class="child-page clearfix" style="background-image: url(<?php echo $image[0]; ?>);">
 							<div class="span five break-on-mobile">
@@ -86,22 +94,27 @@ get_header(); ?>
 												break;
 											} ?>
 										<div class="break-on-mobile span <?php if ( get_sub_field( 'hide_on_mobile', $curr_page->ID ) == true ) { ?>hide-on-mobile<?php } ?> <?php echo $class; ?>" style="<?php the_sub_field( 'css' ); ?>; background-image: url(<?php echo $col_background_image[0]; ?>);">
-											<?php the_sub_field( 'content' ); ?><?php if ( get_sub_field( 'list_item_with_icon' ) ): ?>
-											<ul class="icon-list">
-												<?php while ( has_sub_field( 'list_item_with_icon', $id ) ) : ?><?php
+											<?php the_sub_field( 'content' ); ?>
+											<?php if ( get_sub_field( 'list_item_with_icon' ) ): ?>
+												<ul class="icon-list">
+													<?php while ( has_sub_field( 'list_item_with_icon', $id ) ) : ?>
+														<?php
 															$list_item_with_icon_image_id = get_sub_field( 'item_icon' );
-														$list_item_with_icon_image = wp_get_attachment_image_src( $list_item_with_icon_image_id, 'full' );
-												?>
-												<li style="background-image: url(<?php echo $list_item_with_icon_image[0]; ?>);">
-													<div class="item-title">
-														<?php the_sub_field( 'item_title' ); ?>
-													</div>
-													<div class="item-content">
-														<?php the_sub_field( 'item_content' ); ?>
-													</div>
-												</li><?php endwhile; ?>
-											</ul><?php endif; ?>
-										</div><?php endwhile; ?>
+															$list_item_with_icon_image = wp_get_attachment_image_src( $list_item_with_icon_image_id, 'full' );
+														?>
+														<li style="background-image: url(<?php echo $list_item_with_icon_image[0]; ?>);">
+															<div class="item-title">
+																<?php the_sub_field( 'item_title' ); ?>
+															</div>
+															<div class="item-content">
+																<?php the_sub_field( 'item_content' ); ?>
+															</div>
+														</li>
+													<?php endwhile; ?>
+												</ul>
+											<?php endif; ?>
+										</div>
+									<?php endwhile; ?>
 									</div>
 								</div>
 								<?php endif; ?>

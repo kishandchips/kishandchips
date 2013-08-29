@@ -25,7 +25,13 @@ get_header(); ?>
 	$("#slider").rangeSlider({
 		bounds:{min: 2, max: 15},
 		defaultValues:{min: 3, max: 8},
-		step: 0.1
+		step: 0.1,
+		 formatter:function(val){
+        	var value = Math.round(val * 5) / 5,
+          	decimal = value - Math.round(val);
+        	return decimal == 0 ? '£' + value.toString() + ".0" + 'K' :  '£' + value.toString() + 'K';
+
+		}
 	});
 	$("#dateSlider").dateRangeSlider({
 		bounds:{
@@ -44,8 +50,8 @@ get_header(); ?>
     });
 
     $("#slider").bind("valuesChanged", function(e, data){
-		$('#input_1_12').val(data.values.min);
-		$('#input_1_14').val(data.values.max);
+		$('#input_1_17').val('£' + data.values.min + 'K');
+		$('#input_1_18').val('£' + data.values.max + 'K');
     });    
 
 </script>	

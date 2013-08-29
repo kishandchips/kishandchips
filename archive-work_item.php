@@ -7,30 +7,49 @@
  */
 query_posts(array_merge($wp_query->query_vars, array('orderby' => 'menu_order', 'order' => 'ASC')));
 get_header(); ?>
-
 <div id="archive-work">
 	<div class="container">
+		<h2><?php _e('Project Archives')?></h2>
+		<div class="categories clearfix">
+			<?php
+                $args = array(
+                    'orderby'   => 'name',
+                    'order'     => 'ASC',
+                    'taxonomy'  => 'item_category'
+                );
+                $terms = get_terms( 'item_category', $args );
+                $current_cat_id = get_queried_object()->term_id;
+			?>
+			<ul>
+				<li>
+					<a <?php if($current_cat_id == ''): ?>class='current'<?php endif; ?> href="<?php echo get_permalink(1849); ?>"><?php _e('All Projects')?></a>
+				</li>
+				<?php foreach ($terms as $term) : ?>
+					<li>
+						<a <?php if($current_cat_id == $term->term_id): ?>class='current'<?php endif; ?> href="<?php echo get_term_link($term);?>"><?php echo $term->name; ?></a>
+					</li>
+				 <?php endforeach; ?>
+			</ul>
+		</div>
 		<?php $i = 0; ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 			<?php 
 				$logo_id = get_field('item_logo');
 				$logo = wp_get_attachment_image_src($logo_id, 'full');
 			?>
-				<a class="item overlay-btn" href="<?php the_permalink(); ?>">
+				<a class="item overlay-btn span third" href="<?php the_permalink(); ?>">
 					<div class="work row clearfix">
-						<div class="span four info">
-							<div class="centerer valign-center">
-								<div class="logo">
-									<?php if(get_field('item_logo') !=''): ?>
-										<img src="<?php echo $logo[0]; ?>" alt="">
-									<?php else :?>
-										<h4 class="title"><?php the_title(); ?></h4> 
-									<?php endif;?>															
-								</div>
-								<div class="title"><?php the_field('item_sub_title')?></div>
-							</div>		
+						<div class="info">
+							<div class="logo">
+								<?php if(get_field('item_logo') !=''): ?>
+									<img src="<?php echo $logo[0]; ?>" alt="">
+								<?php else :?>
+									<h4 class="title"><?php the_title(); ?></h4> 
+								<?php endif;?>															
+							</div>
+							<div class="title"><?php the_field('item_sub_title')?></div>
 						</div>
-						<div class="span six image right">
+						<div class="image">
 							<?php the_post_thumbnail('full', array('class' => 'scale')); ?>
 						</div>
 					</div>

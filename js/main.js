@@ -50,8 +50,6 @@
 					$('.gform_body #gform_page_' + pageId + ' .gform_page_fields', projectplannerForm).prepend(step);
 				});
 			}
-			
-			console.log($('.project-link'));
 
 			$(window).resize(this.resize);
 			this.resize();

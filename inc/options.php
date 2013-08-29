@@ -46,7 +46,13 @@ function theme_options_do_page() {
 					<td>
 						 <input id="kishandchips_theme_options[work_page_id]" class="regular-text" type="text" name="kishandchips_theme_options[work_page_id]" value="<?php esc_attr_e( $options['work_page_id'] ); ?>" />
 					</td>
-				</tr>		
+				</tr>	
+
+				<tr valign="top"><th scope="row"><?php _e( 'Work Archive Page ID', 'kishandchips' ); ?></th>
+					<td>
+						 <input id="kishandchips_theme_options[work_archive_page_id]" class="regular-text" type="text" name="kishandchips_theme_options[work_archive_page_id]" value="<?php esc_attr_e( $options['work_archive_page_id'] ); ?>" />
+					</td>
+				</tr>						
 
 				<tr valign="top"><th scope="row"><?php _e( 'Facebook URL', 'kishandchips' ); ?></th>
 					<td>
@@ -81,6 +87,7 @@ function theme_options_do_page() {
  */
 function theme_options_validate( $input ) {
 	$input['work_page_id'] = wp_filter_nohtml_kses( $input['work_page_id'] );
+	$input['work_archive_page_id'] = wp_filter_nohtml_kses( $input['work_archive_page_id'] );
 	$input['facebook_url'] = wp_filter_nohtml_kses( $input['facebook_url'] );
 	$input['twitter_url'] = wp_filter_nohtml_kses( $input['twitter_url'] );
 	$input['pinterest_url'] = wp_filter_nohtml_kses( $input['pinterest_url'] );

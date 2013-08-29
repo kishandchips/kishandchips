@@ -719,13 +719,13 @@ button {
 	@include font-size(14);
 	@include avenir-black;
 	border-bottom: 2px solid #fbd100;
-	padding: 0 2.8rem 0.3rem 0.1rem;
+	padding: 0 20px 0.3rem 0.1rem;
 	@include inline-block;
 	background: url('../images/icons/links_arrow_right.png') right center no-repeat;
 
 	&.mail {
 		background: url('../images/icons/mail.png') left top no-repeat;
-		padding: 0 0.1rem 0.3rem 2.8rem;
+		padding: 0 0.1rem 0.3rem 20px;
 	}
 
 	&.more-btn {
@@ -1111,7 +1111,7 @@ textarea {
 }
 
 input[type=submit],
-input[type=reset] {
+input[type=reset], .button {
 	cursor: pointer;	
 	border: none;
 	display: inline-block;
@@ -1126,16 +1126,6 @@ input[type=reset] {
 	margin: 0 0 0.5em 0;
 	width: 195px;
 
-	&:after {
-		content: 'We’ll be in touch very soon!';
-		color: #a2a2a2;
-		@include avenir-heavy;
-		@include font-size(18);
-		display: block;
-		text-align: center;
-		margin-top: 25px;
-
-	}
 	&:hover {
 		color: #FFF;
 		background: #f7ab00;
@@ -1144,6 +1134,12 @@ input[type=reset] {
 	@include device-width(8) {
 		font-size: 1em;
 	}
+}
+
+a.button {
+	width: auto;
+	color: #333;
+	text-transform: none;
 }
 
 
@@ -1367,6 +1363,13 @@ fieldset {
 			}
 		}
  	}
+}
+
+#gforms_confirmation_message {
+	padding: 10%;
+	text-align: center;
+	@include avenir-heavy;
+	@include font-size(30);
 }
 
 /**

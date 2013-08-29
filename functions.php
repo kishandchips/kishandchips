@@ -67,7 +67,7 @@ function kishandchips_setup() {
 
 	$work_item = new Custom_Post_Type( 'Work Item', 
  		array(
- 			'rewrite' => array( 'with_front' => false, 'slug' => get_page_uri(get_kishandchips_option('work_page_id'))),
+ 			'rewrite' => array( 'with_front' => false, 'slug' => get_page_uri(get_kishandchips_option('work_archive_page_id'))),
  			'capability_type' => 'post',
  		 	'publicly_queryable' => true,
    			'has_archive' => true, 
@@ -78,6 +78,16 @@ function kishandchips_setup() {
     		'plural' => 'Our Work'
    		)
    	);
+
+	$work_item->add_taxonomy("Item Category",
+		array(
+			'hierarchical' => true,
+			'rewrite' => array( 'with_front' => false, 'slug' => get_page_uri(get_kishandchips_option('work_page_id')).'/category' )
+		),
+		array(
+			'plural' => "Item Categories"
+		)
+	);
 	
  	// global $wp_rewrite;
 	// $wp_rewrite->flush_rules();
@@ -181,3 +191,4 @@ function get_queried_page(){
 	if($page) return $page;
 	return null;
 }
+

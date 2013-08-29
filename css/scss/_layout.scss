@@ -183,7 +183,7 @@ body {
 	> .top {
 		> .inner {
 			padding: 3.6rem 0 3rem;
-			@include font-size(20);
+			@include font-size(17);
 			@include avenir-black;
 			color: #333;
 
@@ -679,7 +679,7 @@ body {
 		}		
 	} 
 }
-#archive-work {
+#template-case-studies {
 	background: #f7f7f7;
 	padding: 70px 0;
 
@@ -745,6 +745,16 @@ body {
 
 		.image {
 			padding-top: 30px;
+		}
+	}
+
+	.footer {
+		margin-top: 40px;
+
+		.button {
+			@include font-size(20);
+			@include avenir-heavy;
+			padding: 30px 105px;
 		}
 	}
 }
@@ -842,6 +852,83 @@ body {
 		.link {
 			margin-top: 45px;
 			@include font-size(18);
+		}
+	}
+}
+
+#archive-work {
+	background: #f7f7f7;
+	padding-top: 60px;
+
+	.categories {
+		margin: 15px 0 30px 0;
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+
+			li {
+				float: left;
+				margin-right: 5px;
+
+				a {
+					@include avenir-heavy;
+					@include font-size(16);
+					@include border-radius(10px);
+					padding: 9px 19px;
+
+					@include device-width(6) {
+						@include font-size(14);
+						padding: 6px 15px;
+					}
+
+					&:hover, &.current {
+						background: #e4e4e4;
+						color: #333;
+					}
+				}
+			}
+		}
+	}
+
+	.item {
+		background: #FFF;
+		text-align: center;
+		padding: 38px 0 0;
+		margin-bottom: 30px;
+		border: 10px solid #f7f7f7;
+		min-height: 300px; 
+		height:auto !important; 
+		height: 300px; 	
+		position: relative;
+
+		@include device-width(8) {
+			width: 50%;
+		}
+
+		@include device-width(5) {
+			width: 100%;
+		}	
+
+		.info {
+
+			.title {
+				padding: 0 15%;
+			}
+		}	
+
+		.image {
+			position: absolute;
+			bottom: 0;
+			width: 80%;
+			margin: 0 10%;
+		}	
+
+		&.overlay-btn {
+
+			&:after {
+				padding-top: 35%;
+			}
 		}
 	}
 }

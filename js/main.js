@@ -51,6 +51,7 @@
 				});
 			}
 			
+			console.log($('.project-link'));
 
 			$(window).resize(this.resize);
 			this.resize();

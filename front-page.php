@@ -22,6 +22,8 @@ get_header(); ?>
 						<?php $i = 0; ?>
 						<?php while (the_repeater_field('slides')) : ?>					
 						<?php 
+							$work_item = get_sub_field('work_item');
+							
 							$image_id = get_sub_field('image_id');
 							$image = wp_get_attachment_image_src($image_id, 'slide');
 							$background_image_id = get_sub_field('background_image_id');
@@ -38,6 +40,10 @@ get_header(); ?>
 							</div>	
 							<div class="content container">
 								<img class="scale" src="<?php echo $image[0]; ?>" alt="">
+								<a class="project-link" href="<?php echo get_permalink($work_item->ID); ?>">
+									<?php echo get_the_title($work_item->ID); ?>
+									<span>View Project</span>
+								</a>
 							</div>
 						</div>
 						<?php $i++; ?>

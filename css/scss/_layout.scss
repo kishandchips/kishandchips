@@ -32,12 +32,12 @@ html {
 }
 
 body {
-	@include avenir-medium;
+	@include avenir-roman;
 	height: 100%;
 	background: #FFF;
 	color: #373737;
 	@include font-size(14);
-	line-height: 1.4;
+	line-height: 1.5;
 	min-width: 250px;
 
 	@include device-width(8) {
@@ -326,9 +326,43 @@ body {
 				max-width: 60%;
 				height: auto;				
 				margin: 0px auto;
+				position: relative;
 
 				img {
 					margin-top: 15%;
+				}
+
+				.project-link {
+					display: none;
+					background: #000;
+					color: #FFF;
+					@include border-radius(40px);
+					padding: 18px 40px;
+					@include avenir-medium;
+					@include font-size(20);
+					position: absolute;
+					right: -20%;
+					top: 60%;
+					z-index: 9999;
+
+					span {
+						font-size: 70%;
+						color: #fbe88e;
+					}
+
+					@include device-width(8) {
+						font-size: 90%;
+					}
+
+					@include device-width(6) {
+						padding: 10px;
+					}
+				}
+
+				&:hover {
+					.project-link {
+						display: inline;
+					}
 				}
 
 

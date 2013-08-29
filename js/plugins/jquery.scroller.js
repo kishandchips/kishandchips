@@ -174,11 +174,11 @@
 					$('.scroll-item', scroller).removeClass('hover');
 				});
 
-				$('.scroll-item', scroller).on('click', function(e){
-					e.preventDefault();
-					gotoItem($(this).data('id'));	
-					return false;
-				});
+				// $('.scroll-item', scroller).on('click', function(e){
+				// 	e.preventDefault();
+				// 	gotoItem($(this).data('id'));	
+				// 	return false;
+				// });
 
 				$('.scroller-pagination a', scroller).on('click', function(e){
 					e.preventDefault();

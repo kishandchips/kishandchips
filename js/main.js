@@ -41,7 +41,8 @@
 				$('.main-navigation', header).slideToggle(200);
 			});
 
-			var projectplannerForm = $('#project-planner');
+			if($(''))
+			var projectplannerForm = $('#project-planner, #form-want-a-job');
 			if(projectplannerForm.length > 0){
 				$('.gf_page_steps .gf_step', projectplannerForm).each(function(){
 					var step = $(this),

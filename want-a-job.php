@@ -7,7 +7,7 @@
  */
 get_header(); ?>
  
-<div id="project-planner">
+<div id="form-want-a-job">
 	<div id="content">
 		<?php if ( get_field('content')):?>
 			<?php get_template_part('inc/content'); ?>
@@ -15,4 +15,14 @@ get_header(); ?>
 	</div>
 	<?php gravity_form(2, false, false); ?>	
 </div><!-- #page -->
+ <script>
+$(function() {
+
+ 	$('.gform_page_footer').append('<div class="button-sub">We&apos;ll be in touch very soon!</div>');
+
+    $('#gform_target_page_number_2').attr('value','0');
+    $('#gform_source_page_number_2').attr('value','4');
+});
+</script>	
+
 <?php get_footer(); ?>

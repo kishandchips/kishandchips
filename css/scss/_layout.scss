@@ -1019,7 +1019,7 @@ body {
 	}
 }
 
-#project-planner {
+#project-planner, #form-want-a-job {
 
 	.first-row, .third-row{
 		background: #f1f1f1;
@@ -1140,6 +1140,28 @@ body {
 			}
 		}
 	}
+}
+
+#form-want-a-job {
+
+	.fourth-row {
+		.gform_fields {
+			display: block;
+		}
+	}
+
+	.file-upload {
+		.ginput_container {
+			border: 1px solid #c6c6c6;
+			background: #f1f1f1;
+			padding: 30px 50px;
+
+			input {
+				width: 100% !important;
+			}
+		}
+	}
+
 }
 
 #error {}

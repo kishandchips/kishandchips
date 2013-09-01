@@ -192,3 +192,44 @@ function get_queried_page(){
 	return null;
 }
 
+?>
+
+<?php
+/* Gravity Form custom PLaceholder field addon */
+add_action("gform_field_standard_settings", "my_standard_settings", 10, 2);
+
+function my_standard_settings($position, $form_id){
+if($position == 25){	
+?>		
+<li class="admin_label_setting field_setting" style="display: list-item; ">
+	<label for="field_placeholder">Placeholder Text
+		<a href="javascript:void(0);" class="tooltip tooltip_form_field_placeholder" tooltip="&lt;h6&gt;Placeholder&lt;/h6&gt;Enter the placeholder/default text for this field.">(?)</a>		
+	</label>
+	<input type="text" id="field_placeholder" class="fieldwidth-3" size="35" onkeyup="SetFieldProperty('placeholder', this.value);">		
+</li>
+<?php } }
+	add_action("gform_editor_js", "my_gform_editor_js");
+	function my_gform_editor_js(){
+?>
+<script>
+	jQuery(document).bind("gform_load_field_settings", function(event, field, form){
+	jQuery("#field_placeholder").val(field["placeholder"]);
+});
+</script>
+<?php }
+	add_action('gform_enqueue_scripts',"my_gform_enqueue_scripts", 10, 2);
+	function my_gform_enqueue_scripts($form, $is_ajax=false){
+?>
+<script>
+jQuery(function(){
+<?php
+	foreach($form['fields'] as $i=>$field){			
+	if(isset($field['placeholder']) && !empty($field['placeholder'])){				
+?>				
+document.getElementById('input_<?php echo $form['id']?>_<?php echo $field['id']?>').setAttribute('placeholder','<?php echo $field['placeholder']?>');				
+<?php
+} } ?>
+});
+</script>
+<?php } ?>
+

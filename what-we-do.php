@@ -51,8 +51,13 @@ get_header(); ?>
 							<?php // Custom Content Layout ?>
 							<?php $id = ( isset( $id ) ) ? $id : $post->ID; ?>
 							<?php $i = 0; ?>
+							<?php if ( get_field( 'title_more' ) !='' ) :?>
+							 	<div class="header row"><?php the_field( 'title_more' ); ?></div>	
+							<?php endif;?>
 							<?php if ( get_field( 'content', $id ) ): ?>
+
 							<div class="inner">
+
 								<?php while ( has_sub_field( 'content', $id ) ) : ?><?php
 										$background_image_id = get_sub_field( 'background_image_id' );
 									$background_image = wp_get_attachment_image_src( $background_image_id, 'full' );

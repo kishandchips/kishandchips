@@ -16,7 +16,7 @@
 				<div class="span three break-on-mobile"><span class="label">Have a project?</span><a href="<?php bloginfo('url')?>/project-planner" class="link">Project Planner</a></div>
 				<div class="span three break-on-mobile"><span class="label">Want a job?</span><a href="<?php bloginfo('url')?>/want-a-job" class="link">Send us your CV</a></div>
 				<div class="span one socials break-on-mobile">
-					<a href="" data-icon='"' title="Visit us on Twitter"></a>
+					<a href="<?php echo get_option('kishandchips_theme_options[twitter_url]');?>" data-icon='"' title="Visit us on Twitter"></a>
 					<a href="" data-icon='!' title="Visit us on Facebook"></a>
 				</div>
 			</div>

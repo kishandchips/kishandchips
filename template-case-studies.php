@@ -11,7 +11,7 @@ $args = array(
 		'post_type' => 'work_item',
 		'orderby' => 'menu_order',
 		'order' => 'ASC',
-		'posts_per_page' => 15
+		'posts_per_page' => 16
 	);
 query_posts( $args );
 get_header(); ?>

@@ -669,7 +669,7 @@ blockquote {
 
 .flex-container {
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 98%;
     padding-top: 30px;
     height: 0;
     overflow: hidden;
@@ -1038,6 +1038,21 @@ $i: 1;
 	height: 100%;
 }
 
+.margin-top {
+	margin-top: 25px;
+}
+
+.logo-box {
+	max-width: 900px;
+	background: #efefef;
+	margin: 0 auto;
+	padding: 50px 0;
+	text-align: center;
+
+	@include device-width(5) {
+		padding: 0;
+	}
+}
 
 
 /* =============================================================================

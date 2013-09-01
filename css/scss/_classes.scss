@@ -725,7 +725,7 @@ button {
 
 	&.mail {
 		background: url('../images/icons/mail.png') left top no-repeat;
-		padding: 0 0.1rem 0.3rem 20px;
+		padding: 0 0.1rem 0.3rem 2.8rem;
 	}
 
 	&.more-btn {
@@ -1119,7 +1119,7 @@ input[type=reset], .button {
 	@include avenir-black;
 	padding: 12px 75px;
 	text-shadow: none;
-	text-transform: uppercase;
+	text-transform: none;
 	@include font-size(15);
 	color: #FFF;
 	line-height: 1.3;

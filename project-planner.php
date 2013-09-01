@@ -18,9 +18,11 @@ get_header(); ?>
 	
 	
  <script>
-
+$(function() {
  	$('.fourth-row .gform_page_fields').append('<li class="gfield"><label class="gfield_label">When do you need to carry out this project?</label><div id="dateSlider"></div></div><li>');
  	$('.fourth-row .gform_page_fields').append('<li class="gfield"><label class="gfield_label">What budget is available for this project?</label><div id="slider"></div></li>');
+
+ 	$('.gform_page_footer').append('<div class="button-sub">We&apos;ll be in touch very soon!</div>');
  	
 	$("#slider").rangeSlider({
 		bounds:{min: 2, max: 15},
@@ -33,6 +35,7 @@ get_header(); ?>
 
 		}
 	});
+
 	$("#dateSlider").dateRangeSlider({
 		bounds:{
 			min: new Date(2013, 7, 1),
@@ -52,8 +55,11 @@ get_header(); ?>
     $("#slider").bind("valuesChanged", function(e, data){
 		$('#input_1_17').val('£' + data.values.min + 'K');
 		$('#input_1_18').val('£' + data.values.max + 'K');
-    });    
+    });   
 
+    $('#gform_target_page_number_1').attr('value','0');
+    $('#gform_source_page_number_1').attr('value','4');
+});
 </script>	
 	
 </div><!-- #page -->

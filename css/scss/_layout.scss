@@ -581,7 +581,7 @@ body {
 		padding: 20px 30px 13px;
 		@include inline-block;
 		border-top: 1px solid #FFF;
-		margin-top: -11px;
+		margin-top: -1px;
 
 		.link {
 			margin: 0;
@@ -590,8 +590,12 @@ body {
 
 	.accordion {
 
+		.header {
+			padding: 3%;
+		}
+
 		> .inner {
-		margin-bottom: 12px;
+		margin-bottom: 3px;
 		padding: 39px 32px;		
 
 			.row-title {
@@ -606,7 +610,7 @@ body {
 		}
 
 		> .row {
-			margin-bottom: 12px;
+			margin-bottom: 4px;
 
 			.image {
 				width: 18%;
@@ -1048,9 +1052,19 @@ body {
 		.gform_page_footer  {
 			display: block;
 			margin: 0;
-			padding: 0;
+			padding: 90px 0;
 			border: none;
 			text-align: center;
+			background: #f1f1f1;
+
+			.button-sub {
+				color: #a2a2a2;
+				@include font-size(18);
+				@include avenir-heavy;
+				margin-top: 20px;
+			}
+
+
 		}
 
 		.ui-rangeSlider {

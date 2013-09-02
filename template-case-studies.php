@@ -11,7 +11,14 @@ $args = array(
 		'post_type' => 'work_item',
 		'orderby' => 'menu_order',
 		'order' => 'ASC',
-		'posts_per_page' => 16
+		'meta_key' => 'is_case_study',
+		'meta_query' => array(
+		   array(
+		       'key' => 'is_case_study',
+		       'value' => 1,
+		       'compare' => '=',
+		   )
+		)		
 	);
 query_posts( $args );
 get_header(); ?>

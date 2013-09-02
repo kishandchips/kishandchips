@@ -5,7 +5,18 @@
  * @package kishandchips
  * @since kishandchips 1.0
  */
-query_posts(array_merge($wp_query->query_vars, array('orderby' => 'menu_order', 'order' => 'ASC')));
+query_posts(array_merge($wp_query->query_vars, array(
+	'orderby' => 'menu_order',
+	'order' => 'ASC',
+	'meta_key' => 'is_case_study',
+	'meta_query' => array(
+	   array(
+	       'key' => 'is_case_study',
+	       'value' => 1,
+	       'compare' => '!=',
+	   )
+	)	
+	)));
 get_header(); ?>
 <div id="archive-work">
 	<div class="container">
@@ -15,7 +26,8 @@ get_header(); ?>
                 $args = array(
                     'orderby'   => 'name',
                     'order'     => 'ASC',
-                    'taxonomy'  => 'item_category'
+                    'taxonomy'  => 'item_category',
+                    'hide_empty'    => 1
                 );
                 $terms = get_terms( 'item_category', $args );
                 $current_cat_id = get_queried_object()->term_id;

@@ -75,7 +75,7 @@ body {
 	.logo {
 		@include transition(all 0.3s ease);
 		background: url(../images/logos/kishandchips.png) no-repeat;
-		background: url(../images/logos/kishandchips.svg) no-repeat;
+		// background: url(../images/logos/kishandchips.svg) no-repeat;
 		background-size: cover;
 		text-indent: -9999px;
 		display: block;
@@ -198,6 +198,18 @@ body {
 				.label {
 					padding-right: 1.5rem;
 
+					@media only screen and (max-width: 1110px){	
+						font-size: 55%;
+						width:100%;
+						display:block;
+					}	
+
+					@include device-width(5) {
+						width: 100%;
+						display: inline;
+						font-size: 100%;
+					}									
+
 					@include device-width(3) {
 						width: 100%;
 						display: block;
@@ -225,6 +237,8 @@ body {
 			a {
 				@include font-size(34);
 				color: #fbd100;
+				float: left;
+				margin: -10px 5px 5px 0;
 
 				&:hover {
 					color: #333;
@@ -478,8 +492,13 @@ body {
 
 			.text {
 				width: 40%;
+				padding-top: 40px;
 				float: right;
 				margin-right: 10%;
+
+				@include device-width(10) {
+					padding-top: 10px;
+				} 				
 
 				@include device-width(7) {
 					width: 55%;
@@ -521,10 +540,10 @@ body {
 				}
 
 				.text {
-					width: 40%;
+					width: 45%;
 					float: left;
 					margin-right: 0;
-					margin-left: 10%;
+					margin-left: 5%;				
 
 					@include device-width(7) {
 						width: 55%;

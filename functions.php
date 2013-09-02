@@ -226,7 +226,7 @@ jQuery(function(){
 	foreach($form['fields'] as $i=>$field){			
 	if(isset($field['placeholder']) && !empty($field['placeholder'])){				
 ?>				
-document.getElementById('input_<?php echo $form['id']?>_<?php echo $field['id']?>').setAttribute('placeholder','<?php echo $field['placeholder']?>');				
+	document.getElementById('input_<?php echo $form['id']?>_<?php echo $field['id']?>').setAttribute('placeholder','<?php echo $field['placeholder']?>');				
 <?php
 } } ?>
 });

@@ -19,11 +19,14 @@ get_header(); ?>
 		<div class="information clearfix">
 			<div class="inner">
 				<span class="icon home">
-					Kish and Chips Ltd
-					Speedy Pl<br>Greater London<br>WC1H
+					Kish and Chips Ltd<br>
+					1-6 Speedy Place<br>
+					Kings Cross<br>
+					London<br>
+					WC1H 8BU<br>
 				</span>
 				<span class="icon speech">
-					07766 335 681
+					02078378223
 				</span>
 				
 				<a href="mailto:hello@kishandchips.com" class="link mail">hello@kishandchips.com</a><br>

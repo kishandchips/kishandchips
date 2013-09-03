@@ -42,6 +42,9 @@ get_header(); ?>
 					</li>
 				 <?php endforeach; ?>
 			</ul>
+			<a class="link back-btn right floatbtn" href="<?php echo get_permalink(11); ?>" title="<?php _e('Back to Projects')?>">
+				<?php _e('Back to Projects')?>
+			</a>
 		</div>
 		<?php $i = 0; ?>
 			<?php while ( have_posts() ) : the_post(); ?>

@@ -39,7 +39,9 @@ get_header(); ?>
 								</span>				
 							</div>	
 							<div class="content container">
-								<img class="scale" src="<?php echo $image[0]; ?>" alt="">
+								<a href="<?php echo get_permalink($work_item->ID); ?>">
+									<img class="scale" src="<?php echo $image[0]; ?>" alt="">
+								</a>
 								<a class="project-link" href="<?php echo get_permalink($work_item->ID); ?>">
 									<?php echo get_the_title($work_item->ID); ?>
 									<span>View Project</span>

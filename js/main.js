@@ -12,6 +12,8 @@
 					var scroller = $(this);
 					var options = {};
 
+					scroller.hide();
+
 					if(scroller.hasClass('gallery-scroller') || scroller.data('scroll-all') === true) options.scrollAll = true;
 					if(scroller.data('auto-scroll') === true ) options.autoScroll = true;
 					if(scroller.data('resize') === true ) options.resize = true;
@@ -23,6 +25,12 @@
 					}
 
 					scroller.scroller(options);
+
+					if($.fn.imagesLoaded){
+						scroller.imagesLoaded(function(){
+							scroller.fadeIn();
+						});
+					}
 				});
 			}
 

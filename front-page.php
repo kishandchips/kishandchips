@@ -40,7 +40,7 @@ get_header(); ?>
 							</div>	
 							<div class="content container">
 								<a href="<?php echo get_permalink($work_item->ID); ?>">
-									<img class="scale" src="<?php echo $image[0]; ?>" alt="">
+									<img class="scale <?php if($i == 0) echo 'first'; ?>" src="<?php echo $image[0]; ?>" alt="">
 								</a>
 								<a class="project-link" href="<?php echo get_permalink($work_item->ID); ?>">
 									<?php echo get_the_title($work_item->ID); ?>

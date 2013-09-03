@@ -26,7 +26,7 @@ get_header(); ?>
 					WC1H 8BU<br>
 				</span>
 				<span class="icon speech">
-					02078378223
+					0 20 7837 8223
 				</span>
 				
 				<a href="mailto:hello@kishandchips.com" class="link mail">hello@kishandchips.com</a><br>

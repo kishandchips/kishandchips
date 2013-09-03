@@ -11,8 +11,9 @@
 				$('.scroller').each(function(){
 					var scroller = $(this);
 					var options = {};
+					var image = $('img.first', this);
 
-					scroller.hide();
+					image.hide();
 
 					if(scroller.hasClass('gallery-scroller') || scroller.data('scroll-all') === true) options.scrollAll = true;
 					if(scroller.data('auto-scroll') === true ) options.autoScroll = true;
@@ -23,14 +24,14 @@
 							func($(this), nextItem);
 						});
 					}
-
-					scroller.scroller(options);
-
+					
 					if($.fn.imagesLoaded){
-						scroller.imagesLoaded(function(){
-							scroller.fadeIn();
+						image.imagesLoaded(function(){
+							image.fadeIn();
 						});
 					}
+
+					scroller.scroller(options);
 				});
 			}
 

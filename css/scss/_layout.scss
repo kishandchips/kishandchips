@@ -312,6 +312,9 @@ body {
 				@include font-size(20);
 			}				
 
+			@include device-width(4) {
+				@include font-size(15);
+			}	
 
 		}
 

@@ -669,10 +669,13 @@ blockquote {
 
 .flex-container {
     position: relative;
-    padding-bottom: 98%;
-    padding-top: 30px;
-    height: 0;
     overflow: hidden;
+
+    @include device-width(5) {
+	    padding-bottom: 98%;
+	    padding-top: 30px;
+	    height: 0;
+    }
 }
 
 .flex-container iframe,   

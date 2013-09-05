@@ -67,14 +67,14 @@ body {
 
 	.logo-container {
 		@include transition(all 0.3s ease);
-		width: 57px;
-		height: 57px;
+		width: 71px;
+		height: 71px;
 		margin: 0 auto;
 	}
 
 	.logo {
 		@include transition(all 0.3s ease);
-		background: url(../images/logos/kishandchips.png) no-repeat;
+		background: url(../images/logos/heart.png) no-repeat;
 		// background: url(../images/logos/kishandchips.svg) no-repeat;
 		background-size: cover;
 		text-indent: -9999px;

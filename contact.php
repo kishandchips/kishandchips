@@ -33,7 +33,7 @@ get_header(); ?>
 	<div class="span equal-height break-on-mobile six map">
 		<div class="inner clearfix">
 			<div class="flex-container">
-<iframe width="600" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;q=Speedy+Pl,+London,+Greater+London+WC1H,+United+Kingdom&amp;sll=51.528642,-0.101599&amp;sspn=0.457938,1.234589&amp;ie=UTF8&amp;geocode=FcI_EgMdfRr-_w&amp;split=0&amp;hq=&amp;hnear=Speedy+Pl,+London+WC1H,+United+Kingdom&amp;t=m&amp;ll=51.52781,-0.124454&amp;spn=0.032039,0.051413&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+<iframe width="600" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.uk/maps?f=q&amp;source=s_q&amp;hl=en&amp;q=Speedy+Pl,+London,+Greater+London+WC1H,+United+Kingdom&amp;sll=51.528642,-0.101599&amp;sspn=0.457938,1.234589&amp;ie=UTF8&amp;geocode=FcI_EgMdfRr-_w&amp;split=0&amp;hq=&amp;hnear=Speedy+Pl,+London+WC1H,+United+Kingdom&amp;t=m&amp;ll=51.52781,-0.124454&amp;spn=0.032039,0.051413&amp;z=15&amp;iwloc&amp;output=embed"></iframe>
 			</div>
 		</div>
 	</div>

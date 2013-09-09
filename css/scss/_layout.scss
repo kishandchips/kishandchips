@@ -52,7 +52,7 @@ body {
 }
 
 #header {
-	height: 144px;
+	height: 159px;
 	background: #FFF;
 
 	@include device-width(4) {
@@ -313,7 +313,11 @@ body {
 			}				
 
 			@include device-width(4) {
-				@include font-size(15);
+				@include font-size(30);
+
+				span {
+					display: block;
+				}
 			}	
 
 		}
@@ -322,6 +326,14 @@ body {
 			position: relative;
 			height: 0;
 			padding-top: $ratio * 100%;
+
+			@include device-width(6) {
+				padding-top: 54%;
+			}					
+
+			@include device-width(4) {
+				padding-top: 75%;
+			}				
 
 			> .inner {
 				position: absolute;
@@ -363,8 +375,20 @@ body {
 				margin: 0px auto;
 				position: relative;
 
+				@include device-width(6) {
+					max-width: 80%;
+				}				
+
+				@include device-width(4) {
+					max-width: 90%;
+				}
+
 				img {
 					margin-top: 15%;
+
+					@include device-width(4) {
+						margin-top: 30%;
+					}						
 				}
 
 				.project-link {
@@ -381,6 +405,10 @@ body {
 					right: -20%;
 					top: 60%;
 					z-index: 9999;
+
+					@include device-width(4) {
+						right: 0;
+					}					
 
 					span {
 						font-size: 70%;

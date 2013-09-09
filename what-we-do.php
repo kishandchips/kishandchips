@@ -60,7 +60,7 @@ get_header(); ?>
 
 								<?php while ( has_sub_field( 'content', $id ) ) : ?><?php
 										$background_image_id = get_sub_field( 'background_image_id' );
-									$background_image = wp_get_attachment_image_src( $background_image_id, 'full' );
+										$background_image = wp_get_attachment_image_src( $background_image_id, 'full' );
 								?>
 								<?php if ( get_sub_field( 'row_title' ) ): ?>
 									<div class="row-title">
@@ -155,7 +155,7 @@ get_header(); ?>
 
 							<?php // Content of Capabilities Repeater Field ?>
 							<?php if ( get_field( 'capability_rows', $id ) ): ?><?php while ( has_sub_field( 'capability_rows', $id ) ) : ?>
-							<div class="row clearfix">
+							<div id="<?php the_sub_field('anchor_tag'); ?>" class="row clearfix">
 								<?php
 									$cap_image_id = get_sub_field( 'image' );
 									$cap_image = wp_get_attachment_image_src( $cap_image_id, 'full' );

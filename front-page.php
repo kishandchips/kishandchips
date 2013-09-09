@@ -19,6 +19,14 @@ get_header(); ?>
 			<div class="outer">
 				<div class="inner">
 					<div class="scroller-mask">
+							<div class="header">
+								<span class="black">
+									<?php _e('Kish & Chips :'); ?>
+								</span>
+								<span class="dark-yellow" >
+									<?php _e('Digital Architects'); ?>
+								</span>				
+							</div>							
 						<?php $i = 0; ?>
 						<?php while (the_repeater_field('slides')) : ?>					
 						<?php 
@@ -30,14 +38,6 @@ get_header(); ?>
 							$background_image = wp_get_attachment_image_src($background_image_id, 'full');    			
 						?>
 						<div class="scroll-item <?php if($i == 0) echo 'current'; ?>" data-id="<?php echo $i;?>" style="background-image: url(<?php echo $background_image[0]; ?>);">
-							<div class="header">
-								<span style="color: <?php echo get_sub_field('kc_color'); ?>">
-									<?php _e('Kish & Chips :'); ?>
-								</span>
-								<span style="color: <?php the_sub_field( 'digital_color' ); ?>">
-									<?php _e('Digital Architects'); ?>
-								</span>				
-							</div>	
 							<div class="content container">
 								<a href="<?php echo get_permalink($work_item->ID); ?>">
 									<img class="scale <?php if($i == 0) echo 'first'; ?>" src="<?php echo $image[0]; ?>" alt="">

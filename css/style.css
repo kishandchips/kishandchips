@@ -328,7 +328,8 @@ table {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 /* Use the following CSS code if you want to have a class per icon */
 /*
@@ -336,8 +337,8 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-/* line 30, scss/_icons.scss */
-.icon-tick, .icon-twitter, .icon-stars, .icon-ribbon-bear, .icon-pinterest, .icon-phone, .icon-person, .icon-open-quote, .icon-info, .icon-google-plus, .icon-facebook, .icon-expand, .icon-camera, .icon-arrow-up, .icon-arrow-right, .icon-arrow-left, .icon-arrow-down, .icon-alert, .icon-untitled, .icon-shopping-bag, .icon-ce-logo {
+/* line 31, scss/_icons.scss */
+.icon-kishandchips, .icon-facebook, .icon-twitter, .icon-chevron-left, .icon-chevron-right {
   font-family: 'icons';
   speak: none;
   font-style: normal;
@@ -347,89 +348,25 @@ you can use the generic selector below, but it's slower:
   line-height: 1;
   -webkit-font-smoothing: antialiased; }
 
-/* line 40, scss/_icons.scss */
-.icon-tick:before {
-  content: "\61"; }
-
-/* line 43, scss/_icons.scss */
-.icon-twitter:before, .twitter-btn:before {
-  content: "\37"; }
-
-/* line 46, scss/_icons.scss */
-.icon-stars:before {
-  content: "\39"; }
-
-/* line 49, scss/_icons.scss */
-.icon-ribbon-bear:before {
-  content: "\71"; }
-
-/* line 52, scss/_icons.scss */
-.icon-pinterest:before, .pinterest-btn:before {
-  content: "\34"; }
-
-/* line 55, scss/_icons.scss */
-.icon-phone:before {
-  content: "\35"; }
-
-/* line 58, scss/_icons.scss */
-.icon-person:before {
-  content: "\36"; }
-
-/* line 61, scss/_icons.scss */
-.icon-open-quote:before {
-  content: "\77"; }
-
-/* line 64, scss/_icons.scss */
-.icon-info:before {
-  content: "\65"; }
-
-/* line 67, scss/_icons.scss */
-.icon-google-plus:before {
-  content: "\72"; }
-
-/* line 70, scss/_icons.scss */
-.icon-facebook:before, .facebook-btn:before {
-  content: "\74"; }
-
-/* line 73, scss/_icons.scss */
-.icon-expand:before {
-  content: "\79"; }
-
-/* line 76, scss/_icons.scss */
-.icon-camera:before {
-  content: "\75"; }
-
-/* line 79, scss/_icons.scss */
-.icon-arrow-up:before {
-  content: "\69"; }
-
-/* line 82, scss/_icons.scss */
-.icon-arrow-right:before, .scroller .scroller-navigation .next-btn:before {
-  content: "\6f"; }
-
-/* line 85, scss/_icons.scss */
-.icon-arrow-left:before, .scroller .scroller-navigation .prev-btn:before {
+/* line 41, scss/_icons.scss */
+.icon-kishandchips:before {
   content: "\31"; }
 
-/* line 88, scss/_icons.scss */
-.icon-arrow-down:before {
+/* line 44, scss/_icons.scss */
+.icon-facebook:before, .facebook-btn:before {
   content: "\32"; }
 
-/* line 91, scss/_icons.scss */
-.icon-alert:before {
+/* line 47, scss/_icons.scss */
+.icon-twitter:before, .twitter-btn:before {
   content: "\33"; }
 
-/* line 94, scss/_icons.scss */
-.icon-untitled:before {
-  content: "\70"; }
+/* line 50, scss/_icons.scss */
+.icon-chevron-left:before, .scroller .scroller-navigation .prev-btn:before {
+  content: "\34"; }
 
-/* line 97, scss/_icons.scss */
-.icon-shopping-bag:before {
-  content: "\73"; }
-
-/* line 100, scss/_icons.scss */
-.icon-ce-logo:before {
-  content: "\64"; }
+/* line 53, scss/_icons.scss */
+.icon-chevron-right:before, .scroller .scroller-navigation .next-btn:before {
+  content: "\35"; }
 
 /* =============================================================================
    Backgrounds

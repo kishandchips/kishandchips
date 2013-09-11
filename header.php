@@ -59,7 +59,9 @@
 	<header id="header" role="banner">
 		<div class="inner container">
 			<h1 class="logo-container">
-				<a class="logo" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				<a class="logo" data-icon="1" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+					
+				</a>
 			</h1>
 			<div class="navigation-container">
 				<button class="mobile-navigation-btn uppercase">menu <i aria-hidden="true" class="icon-arrow-down tiny"></i></button>

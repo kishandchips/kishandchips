@@ -32,33 +32,37 @@ get_header(); ?>
 					<?php
 						$args = array( 'post_type' => 'page', 'posts_per_page' => -1, 'post_parent' => $post->ID, 'order' => 'ASC', 'orderby' => 'menu_order' );
 						$parent = new WP_Query( $args );
+						$j = 0;
 					?>						
 					<?php if ( $parent->have_posts() ) : ?>
 					<?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
 					<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>
+					<?php $id = ( isset( $id ) ) ? $id : $post->ID; ?>
 					<div id="child-<?php the_ID(); ?>" class="outer <?php echo ( ++$j % 2 == 0 ) ? 'even' : 'odd'; ?>">
 						<div class="child-page clearfix" style="background-image: url(<?php echo $image[0]; ?>);">
 							<div class="span five break-on-mobile">
 								<h3>
-									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+									<a class="title" href="" data-id="<?php echo $id ?>"><?php the_title(); ?></a>
 								</h3>
 								<p>
 									<?php the_content(); ?>
-								</p><a href="<?php the_permalink(); ?>" class="link more-btn acc-open">Read More</a> <a href="" class="link close-btn acc-close">Close</a>
+								</p><a href="<?php the_permalink(); ?>" class="link more-btn acc-open" data-id="<?php echo $id ?>">Read More</a>
+								<a href="" class="link close-btn acc-close hide" data-id="<?php echo $id ?>">Close</a>
 							</div>
 						</div>
-						<div class="accordion hide">
+						<div class="accordion hide" data-id="<?php echo $id ?>">
 							<?php // Custom Content Layout ?>
-							<?php $id = ( isset( $id ) ) ? $id : $post->ID; ?>
+							
 							<?php $i = 0; ?>
 							<?php if ( get_field( 'title_more' ) !='' ) :?>
 							 	<div class="header row"><?php the_field( 'title_more' ); ?></div>	
 							<?php endif;?>
 							<?php if ( get_field( 'content', $id ) ): ?>
+							<?php while ( has_sub_field( 'content', $id ) ) : ?>
+							<div class="inner" id="<?php the_sub_field('anchor_tag'); ?>">
 
-							<div class="inner">
-
-								<?php while ( has_sub_field( 'content', $id ) ) : ?><?php
+								
+								<?php
 										$background_image_id = get_sub_field( 'background_image_id' );
 										$background_image = wp_get_attachment_image_src( $background_image_id, 'full' );
 								?>
@@ -173,7 +177,7 @@ get_header(); ?>
 								</div>
 							</div><?php endwhile; ?><?php endif; ?>
 							<div class="close-bottom">
-								<a href="" class="link close-btn">Close</a>
+								<a href="" class="link close-btn" data-id="<?php echo $id ?>">Close</a>
 							</div>
 						</div>
 					</div><?php endwhile; ?><?php endif; wp_reset_query(); ?>

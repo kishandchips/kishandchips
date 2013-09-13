@@ -58,7 +58,7 @@ $(function() {
     });   
 
     $('#gform_target_page_number_1').attr('value','0');
-    $('#gform_source_page_number_1').attr('value','4');
+    $('#gform_source_page_number_1').attr('value','0');
 });
 </script>	
 	

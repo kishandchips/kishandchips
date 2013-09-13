@@ -54,6 +54,7 @@ get_header(); ?>
 			?>
 				<a class="item overlay-btn span third" href="<?php the_permalink(); ?>">
 					<div class="work row clearfix">
+						<div class="inner">
 						<div class="info">
 							<div class="logo">
 								<?php if(get_field('item_logo') !=''): ?>
@@ -62,8 +63,9 @@ get_header(); ?>
 									<h4 class="title"><?php the_title(); ?></h4> 
 								<?php endif;?>															
 							</div>
-							<div class="title"><?php the_field('item_sub_title')?></div>
 						</div>
+						</div>
+						<div class="title"><?php the_field('item_sub_title')?></div>						
 						<div class="image">
 							<?php the_post_thumbnail('full', array('class' => 'scale')); ?>
 						</div>

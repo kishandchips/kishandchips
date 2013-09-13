@@ -21,7 +21,7 @@ $(function() {
  	$('.gform_page_footer').append('<div class="button-sub">We&apos;ll be in touch very soon!</div>');
 
     $('#gform_target_page_number_2').attr('value','0');
-    $('#gform_source_page_number_2').attr('value','4');
+    $('#gform_source_page_number_2').attr('value','0');
 });
 </script>	
 

@@ -15,15 +15,15 @@
 get_header(); ?>
 <section id="front-page" class="clearfix">
 	<?php if ( get_field('slides')) :?>
-		<div id="homepage-scroller" class="scroller" data-auto-scroll="true" >
+		<div id="homepage-scroller" class="scroller" data-auto-scroll="true" data-callback="onHomeScrollerChange" >
 			<div class="outer">
 				<div class="inner">
 					<div class="scroller-mask">
 							<div class="header">
-								<span class="black">
+								<span class="black kc_title">
 									<?php _e('Kish & Chips :'); ?>
 								</span>
-								<span class="dark-yellow" >
+								<span class="dark-yellow digital_title" >
 									<?php _e('Digital Architects'); ?>
 								</span>				
 							</div>							
@@ -37,7 +37,7 @@ get_header(); ?>
 							$background_image_id = get_sub_field('background_image_id');
 							$background_image = wp_get_attachment_image_src($background_image_id, 'full');    			
 						?>
-						<div class="scroll-item <?php if($i == 0) echo 'current'; ?>" data-id="<?php echo $i;?>" style="background-image: url(<?php echo $background_image[0]; ?>);">
+						<div class="scroll-item <?php if($i == 0) echo 'current'; ?>" data-id="<?php echo $i;?>" data-kc-color="<?php the_sub_field('kc_color')?>" data-digital-color="<?php the_sub_field('digital_color')?>" style="background-image: url(<?php echo $background_image[0]; ?>);">
 							<div class="content container">
 								<a href="<?php echo get_permalink($work_item->ID); ?>">
 									<img class="scale <?php if($i == 0) echo 'first'; ?>" src="<?php echo $image[0]; ?>" alt="">

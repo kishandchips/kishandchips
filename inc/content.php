@@ -49,7 +49,7 @@
 						</div>
 					<?php endwhile; ?>
 					</div>
-				</div>					
+				</div>				
 			</div>
 			<?php endif; ?>
 			<?php break; ?>

@@ -39,6 +39,7 @@ body {
 	@include font-size(14);
 	line-height: 1.5;
 	min-width: 250px;
+	-webkit-font-smoothing: antialiased;
 
 	@include device-width(8) {
 		@include font-size(13);
@@ -57,12 +58,12 @@ body {
 
 	@include device-width(4) {
 		height: auto;
-		padding-bottom: 25px;
+		padding-bottom: 40px;
 	}
 
 	> .inner {
 		text-align: center;
-		padding-top: 1.8em;
+		padding-top: 25px;
 	}
 
 	.logo-container {
@@ -79,18 +80,22 @@ body {
 		height: 100%;
 		position: relative;
 		z-index: 50;
-		@include font-size(65);
+		font-size: 65px;
+
+		&:hover {
+			color: #fbd100;
+		}
 	}
 
 	.navigation-container {
-		margin: 1.5em 0 0 0;
+		margin: 21px 0 0 0;
 
 	
 		.mobile-navigation-btn {
 			display: none;
 			padding: 1em 2em;
 			border-right: 1px solid #cecece;
-			margin-top: -62px;	
+			margin-top: -69px;	
 	
 			@include device-width(4) {
 				display: block;
@@ -100,13 +105,7 @@ body {
 	
 
 	.main-navigation { 
-		padding: 0 2.3em;
 		margin: 0;
-
-		@include device-width(5) {
-			padding: 0;
-			margin-top: 30px;
-		}
 
 		@include device-width(4) {
 			display: none;
@@ -131,7 +130,8 @@ body {
 			 		display: inline-block;
 					padding: 0 6px 20px;
 					@include avenir-roman;
-			 		@include font-size(13);
+			 		font-size: 13px;
+			 		line-height: 19px;
 			 		margin: 0 13px;
 				 	color: #333;
 				 	border-bottom: 3px solid transparent;
@@ -388,7 +388,7 @@ body {
 				}
 
 				img {
-					margin-top: 15%;
+					margin-top: 16%;
 
 					@include device-width(4) {
 						margin-top: 30%;
@@ -444,6 +444,15 @@ body {
 	}
 	
 	#content {
+
+		h1 {
+			letter-spacing: 1.9px;
+			padding: 0 21px;
+
+			@include device-width(6) {
+				padding: 0;
+			}
+		}
 
 		.top-border {
 			height: 12px;

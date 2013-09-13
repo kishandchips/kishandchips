@@ -2044,7 +2044,8 @@ body {
   font-size: 14px;
   font-size: 1.4rem;
   line-height: 1.5;
-  min-width: 250px; }
+  min-width: 250px;
+  -webkit-font-smoothing: antialiased; }
   @media only screen and (max-width: 800px) {
     /* line 34, scss/_layout.scss */
     body {
@@ -2052,24 +2053,24 @@ body {
       font-size: 1.3rem;
       line-height: 1.3; } }
 
-/* line 50, scss/_layout.scss */
+/* line 51, scss/_layout.scss */
 #wrap {
   height: 100%; }
 
-/* line 54, scss/_layout.scss */
+/* line 55, scss/_layout.scss */
 #header {
   height: 159px;
   background: #FFF; }
   @media only screen and (max-width: 400px) {
-    /* line 54, scss/_layout.scss */
+    /* line 55, scss/_layout.scss */
     #header {
       height: auto;
-      padding-bottom: 25px; } }
-  /* line 63, scss/_layout.scss */
+      padding-bottom: 40px; } }
+  /* line 64, scss/_layout.scss */
   #header > .inner {
     text-align: center;
-    padding-top: 1.8em; }
-  /* line 68, scss/_layout.scss */
+    padding-top: 25px; }
+  /* line 69, scss/_layout.scss */
   #header .logo-container {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -2078,7 +2079,7 @@ body {
     width: 71px;
     height: 71px;
     margin: 0 auto; }
-  /* line 75, scss/_layout.scss */
+  /* line 76, scss/_layout.scss */
   #header .logo {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -2089,40 +2090,36 @@ body {
     height: 100%;
     position: relative;
     z-index: 50;
-    font-size: 65px;
-    font-size: 6.5rem; }
-  /* line 85, scss/_layout.scss */
+    font-size: 65px; }
+    /* line 85, scss/_layout.scss */
+    #header .logo:hover {
+      color: #fbd100; }
+  /* line 90, scss/_layout.scss */
   #header .navigation-container {
-    margin: 1.5em 0 0 0; }
-    /* line 89, scss/_layout.scss */
+    margin: 21px 0 0 0; }
+    /* line 94, scss/_layout.scss */
     #header .navigation-container .mobile-navigation-btn {
       display: none;
       padding: 1em 2em;
       border-right: 1px solid #cecece;
-      margin-top: -62px; }
+      margin-top: -69px; }
       @media only screen and (max-width: 400px) {
-        /* line 89, scss/_layout.scss */
+        /* line 94, scss/_layout.scss */
         #header .navigation-container .mobile-navigation-btn {
           display: block; } }
-  /* line 102, scss/_layout.scss */
+  /* line 107, scss/_layout.scss */
   #header .main-navigation {
-    padding: 0 2.3em;
     margin: 0; }
-    @media only screen and (max-width: 500px) {
-      /* line 102, scss/_layout.scss */
-      #header .main-navigation {
-        padding: 0;
-        margin-top: 30px; } }
     @media only screen and (max-width: 400px) {
-      /* line 102, scss/_layout.scss */
+      /* line 107, scss/_layout.scss */
       #header .main-navigation {
         display: none; } }
-    /* line 116, scss/_layout.scss */
+    /* line 115, scss/_layout.scss */
     #header .main-navigation > ul {
       margin: 0;
       padding: 0;
       font-size: 0.1px; }
-      /* line 121, scss/_layout.scss */
+      /* line 120, scss/_layout.scss */
       #header .main-navigation > ul > li {
         display: inline-block;
         position: relative;
@@ -2131,17 +2128,17 @@ body {
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease; }
         @media only screen and (max-width: 400px) {
-          /* line 121, scss/_layout.scss */
+          /* line 120, scss/_layout.scss */
           #header .main-navigation > ul > li {
             display: block; } }
-        /* line 130, scss/_layout.scss */
+        /* line 129, scss/_layout.scss */
         #header .main-navigation > ul > li > a {
           display: inline-block;
           padding: 0 6px 20px;
           font-family: 'Avenir LT W01 55 Roman';
           font-weight: normal;
           font-size: 13px;
-          font-size: 1.3rem;
+          line-height: 19px;
           margin: 0 13px;
           color: #333;
           border-bottom: 3px solid transparent; }
@@ -2150,7 +2147,7 @@ body {
             border-bottom: 3px solid #fbe88e;
             color: #fbd100; }
           @media only screen and (max-width: 400px) {
-            /* line 130, scss/_layout.scss */
+            /* line 129, scss/_layout.scss */
             #header .main-navigation > ul > li > a {
               padding: 20px 6px;
               display: block;
@@ -2365,7 +2362,7 @@ body {
           max-width: 90%; } }
       /* line 390, scss/_layout.scss */
       #front-page #homepage-scroller .scroll-item > .content img {
-        margin-top: 15%; }
+        margin-top: 16%; }
         @media only screen and (max-width: 400px) {
           /* line 390, scss/_layout.scss */
           #front-page #homepage-scroller .scroll-item > .content img {
@@ -2418,6 +2415,14 @@ body {
         transition: all 0.3s ease;
         opacity: 1; }
 /* line 448, scss/_layout.scss */
+#front-page #content h1 {
+  letter-spacing: 1.9px;
+  padding: 0 21px; }
+  @media only screen and (max-width: 600px) {
+    /* line 448, scss/_layout.scss */
+    #front-page #content h1 {
+      padding: 0; } }
+/* line 457, scss/_layout.scss */
 #front-page #content .top-border {
   height: 12px;
   background-color: #222222;
@@ -2428,157 +2433,157 @@ body {
   background-image: -moz-linear-gradient(left, #222222 0%, #222222 50%, #fbe88e 50%, #fbe88e 100%);
   background-image: -o-linear-gradient(left, #222222 0%, #222222 50%, #fbe88e 50%, #fbe88e 100%);
   background-image: linear-gradient(left, #222222 0%, #222222 50%, #fbe88e 50%, #fbe88e 100%); }
-/* line 455, scss/_layout.scss */
+/* line 464, scss/_layout.scss */
 #front-page #content .container {
   max-width: 910px; }
 
-/* line 463, scss/_layout.scss */
+/* line 472, scss/_layout.scss */
 #content .span {
   padding: 40px 10px; }
   @media only screen and (max-width: 500px) {
-    /* line 463, scss/_layout.scss */
+    /* line 472, scss/_layout.scss */
     #content .span {
       padding: 20px 10px; } }
 
-/* line 472, scss/_layout.scss */
+/* line 481, scss/_layout.scss */
 #about-us {
   background: #f7f7f7; }
-  /* line 475, scss/_layout.scss */
+  /* line 484, scss/_layout.scss */
   #about-us #key-principles {
     background: #efefef; }
     @media only screen and (max-width: 700px) {
-      /* line 475, scss/_layout.scss */
+      /* line 484, scss/_layout.scss */
       #about-us #key-principles {
         padding-bottom: 40px; } }
-    /* line 482, scss/_layout.scss */
+    /* line 491, scss/_layout.scss */
     #about-us #key-principles .span {
       padding: 40px 40px 40px 0; }
       @media only screen and (max-width: 700px) {
-        /* line 482, scss/_layout.scss */
+        /* line 491, scss/_layout.scss */
         #about-us #key-principles .span {
           padding: 40px 40px 0 0; } }
       @media only screen and (max-width: 500px) {
-        /* line 482, scss/_layout.scss */
+        /* line 491, scss/_layout.scss */
         #about-us #key-principles .span {
           padding: 40px 0 0 0; } }
       @media only screen and (max-width: 700px) {
-        /* line 493, scss/_layout.scss */
+        /* line 502, scss/_layout.scss */
         #about-us #key-principles .span.third {
           width: 50%; } }
-    /* line 500, scss/_layout.scss */
+    /* line 509, scss/_layout.scss */
     #about-us #key-principles .image {
       float: left;
       width: 24%;
       margin-right: 5%; }
       @media only screen and (max-width: 500px) {
-        /* line 500, scss/_layout.scss */
+        /* line 509, scss/_layout.scss */
         #about-us #key-principles .image {
           width: 17%; } }
-    /* line 510, scss/_layout.scss */
+    /* line 519, scss/_layout.scss */
     #about-us #key-principles .text {
       overflow: hidden;
       font-family: 'Avenir LT W01 55 Roman';
       font-weight: normal; }
-      /* line 514, scss/_layout.scss */
+      /* line 523, scss/_layout.scss */
       #about-us #key-principles .text h3 {
         line-height: 1.1;
         margin-top: 0;
         margin-bottom: 0.6em; }
-  /* line 522, scss/_layout.scss */
+  /* line 531, scss/_layout.scss */
   #about-us #meet-the-team {
     background: #f7f7f7;
     padding: 50px 0 80px; }
-    /* line 526, scss/_layout.scss */
+    /* line 535, scss/_layout.scss */
     #about-us #meet-the-team .row {
       background: #FFF;
       margin-top: 18px;
       padding: 15px; }
-      /* line 531, scss/_layout.scss */
+      /* line 540, scss/_layout.scss */
       #about-us #meet-the-team .row .image {
         width: 47%;
         float: left; }
         @media only screen and (max-width: 700px) {
-          /* line 531, scss/_layout.scss */
+          /* line 540, scss/_layout.scss */
           #about-us #meet-the-team .row .image {
             width: 40%; } }
         @media only screen and (max-width: 400px) {
-          /* line 531, scss/_layout.scss */
+          /* line 540, scss/_layout.scss */
           #about-us #meet-the-team .row .image {
             width: 100%;
             float: none;
             margin: 0px auto 20px auto; } }
-      /* line 546, scss/_layout.scss */
+      /* line 555, scss/_layout.scss */
       #about-us #meet-the-team .row .text {
         width: 40%;
         padding-top: 40px;
         float: right;
         margin-right: 10%; }
         @media only screen and (max-width: 1000px) {
-          /* line 546, scss/_layout.scss */
+          /* line 555, scss/_layout.scss */
           #about-us #meet-the-team .row .text {
             padding-top: 10px; } }
         @media only screen and (max-width: 700px) {
-          /* line 546, scss/_layout.scss */
+          /* line 555, scss/_layout.scss */
           #about-us #meet-the-team .row .text {
             width: 55%;
             margin-right: 0; } }
         @media only screen and (max-width: 400px) {
-          /* line 546, scss/_layout.scss */
+          /* line 555, scss/_layout.scss */
           #about-us #meet-the-team .row .text {
             float: none;
             width: 100%; } }
-        /* line 566, scss/_layout.scss */
+        /* line 575, scss/_layout.scss */
         #about-us #meet-the-team .row .text .name {
           line-height: 0.3; }
-        /* line 570, scss/_layout.scss */
+        /* line 579, scss/_layout.scss */
         #about-us #meet-the-team .row .text .position {
           color: #fbd100;
           font-size: 14px;
           font-size: 1.4rem;
           margin-bottom: 1em; }
-        /* line 576, scss/_layout.scss */
+        /* line 585, scss/_layout.scss */
         #about-us #meet-the-team .row .text p {
           font-size: 14px;
           font-size: 1.4rem;
           font-family: 'Avenir LT W01 55 Roman';
           font-weight: normal;
           color: #545454; }
-      /* line 584, scss/_layout.scss */
+      /* line 593, scss/_layout.scss */
       #about-us #meet-the-team .row.even .image {
         float: right;
         margin-left: 0; }
         @media only screen and (max-width: 400px) {
-          /* line 584, scss/_layout.scss */
+          /* line 593, scss/_layout.scss */
           #about-us #meet-the-team .row.even .image {
             float: none;
             margin: 20px auto; } }
-      /* line 595, scss/_layout.scss */
+      /* line 604, scss/_layout.scss */
       #about-us #meet-the-team .row.even .text {
         width: 45%;
         float: left;
         margin-right: 0;
         margin-left: 5%; }
         @media only screen and (max-width: 700px) {
-          /* line 595, scss/_layout.scss */
+          /* line 604, scss/_layout.scss */
           #about-us #meet-the-team .row.even .text {
             width: 55%;
             margin-left: 0; } }
         @media only screen and (max-width: 400px) {
-          /* line 595, scss/_layout.scss */
+          /* line 604, scss/_layout.scss */
           #about-us #meet-the-team .row.even .text {
             float: none;
             width: 100%;
             margin: 0; } }
 
-/* line 617, scss/_layout.scss */
+/* line 626, scss/_layout.scss */
 #what-we-do {
   background: #f7f7f7;
   padding-top: 30px; }
 
-/* line 622, scss/_layout.scss */
+/* line 631, scss/_layout.scss */
 #capabilities {
   padding-bottom: 65px; }
-  /* line 625, scss/_layout.scss */
+  /* line 634, scss/_layout.scss */
   #capabilities .child-page {
     margin: 12px 0;
     padding: 20px 30px 27px;
@@ -2588,27 +2593,27 @@ body {
     -moz-background-size: contain;
     -o-background-size: contain;
     background-size: contain; }
-    /* line 632, scss/_layout.scss */
+    /* line 641, scss/_layout.scss */
     #capabilities .child-page p {
       font-family: 'Avenir LT W01 55 Roman';
       font-weight: normal;
       line-height: 1.5; }
     @media only screen and (max-width: 700px) {
-      /* line 625, scss/_layout.scss */
+      /* line 634, scss/_layout.scss */
       #capabilities .child-page {
         background-image: none !important; }
-        /* line 640, scss/_layout.scss */
+        /* line 649, scss/_layout.scss */
         #capabilities .child-page .span {
           width: 100%; } }
-    /* line 645, scss/_layout.scss */
+    /* line 654, scss/_layout.scss */
     #capabilities .child-page .span {
       padding: 0; }
-  /* line 650, scss/_layout.scss */
+  /* line 659, scss/_layout.scss */
   #capabilities .link {
     font-size: 14px;
     font-size: 1.4rem;
     margin-top: 50px; }
-  /* line 655, scss/_layout.scss */
+  /* line 664, scss/_layout.scss */
   #capabilities .close-bottom {
     padding: 20px 30px 13px;
     display: -moz-inline-stack;
@@ -2619,131 +2624,131 @@ body {
     *display: inline;
     border-top: 1px solid white;
     margin-top: -1px; }
-    /* line 661, scss/_layout.scss */
+    /* line 670, scss/_layout.scss */
     #capabilities .close-bottom .link {
       margin: 0; }
-  /* line 668, scss/_layout.scss */
+  /* line 677, scss/_layout.scss */
   #capabilities .accordion .header {
     padding: 3%; }
-  /* line 672, scss/_layout.scss */
+  /* line 681, scss/_layout.scss */
   #capabilities .accordion > .inner {
     margin-bottom: 3px;
     padding: 39px 32px; }
-    /* line 676, scss/_layout.scss */
+    /* line 685, scss/_layout.scss */
     #capabilities .accordion > .inner .row-title {
       font-family: 'Avenir LT W01 85 Heavy';
       font-weight: normal;
       font-size: 1.6rem;
       margin-bottom: 1em; }
-    /* line 682, scss/_layout.scss */
+    /* line 691, scss/_layout.scss */
     #capabilities .accordion > .inner .span {
       padding-right: 5%; }
-  /* line 687, scss/_layout.scss */
+  /* line 696, scss/_layout.scss */
   #capabilities .accordion > .row {
     margin-bottom: 4px; }
-    /* line 690, scss/_layout.scss */
+    /* line 699, scss/_layout.scss */
     #capabilities .accordion > .row .image {
       width: 18%;
       float: left; }
-    /* line 695, scss/_layout.scss */
+    /* line 704, scss/_layout.scss */
     #capabilities .accordion > .row .text {
       overflow: hidden;
       padding: 5px 230px 20px 20px; }
       @media only screen and (max-width: 900px) {
-        /* line 695, scss/_layout.scss */
+        /* line 704, scss/_layout.scss */
         #capabilities .accordion > .row .text {
           padding: 20px 30px 20px 20px; } }
-  /* line 705, scss/_layout.scss */
+  /* line 714, scss/_layout.scss */
   #capabilities .accordion .icon-list {
     list-style-type: none;
     padding: 0; }
-    /* line 709, scss/_layout.scss */
+    /* line 718, scss/_layout.scss */
     #capabilities .accordion .icon-list li {
       background-repeat: no-repeat;
       padding-left: 35px;
       margin-bottom: 24px; }
-      /* line 714, scss/_layout.scss */
+      /* line 723, scss/_layout.scss */
       #capabilities .accordion .icon-list li .item-title {
         font-family: 'Avenir LT W01 85 Heavy';
         font-weight: normal;
         font-size: 1.4rem; }
-  /* line 728, scss/_layout.scss */
+  /* line 737, scss/_layout.scss */
   #capabilities .odd .child-page, #capabilities .odd .close-bottom {
     background-color: #ececec; }
-  /* line 734, scss/_layout.scss */
+  /* line 743, scss/_layout.scss */
   #capabilities .odd .row .image {
     background: #ececec; }
-  /* line 739, scss/_layout.scss */
+  /* line 748, scss/_layout.scss */
   #capabilities .odd .accordion > .inner, #capabilities .odd .row {
     background-color: #efefef; }
-  /* line 745, scss/_layout.scss */
+  /* line 754, scss/_layout.scss */
   #capabilities .even .child-page, #capabilities .even .close-bottom {
     background-color: #fbe88e; }
-  /* line 751, scss/_layout.scss */
+  /* line 760, scss/_layout.scss */
   #capabilities .even .row .image {
     background: #fbe88e; }
-  /* line 756, scss/_layout.scss */
+  /* line 765, scss/_layout.scss */
   #capabilities .even .accordion > .inner, #capabilities .even .row {
     background-color: #f9eba9; }
 
-/* line 761, scss/_layout.scss */
+/* line 770, scss/_layout.scss */
 #template-case-studies {
   background: #f7f7f7;
   padding: 70px 0; }
-  /* line 765, scss/_layout.scss */
+  /* line 774, scss/_layout.scss */
   #template-case-studies .item {
     position: relative; }
-    /* line 768, scss/_layout.scss */
+    /* line 777, scss/_layout.scss */
     #template-case-studies .item .title {
       color: #333;
       padding: 0 20px; }
-    /* line 776, scss/_layout.scss */
+    /* line 785, scss/_layout.scss */
     #template-case-studies .item:hover .title {
       color: #333; }
-  /* line 782, scss/_layout.scss */
+  /* line 791, scss/_layout.scss */
   #template-case-studies .row.work {
     background-color: #FFF;
     margin-bottom: 15px;
     padding: 15px 3% 0 10px; }
     @media only screen and (max-width: 600px) {
-      /* line 782, scss/_layout.scss */
+      /* line 791, scss/_layout.scss */
       #template-case-studies .row.work {
         padding: 15px 0 0 0; }
-        /* line 790, scss/_layout.scss */
+        /* line 799, scss/_layout.scss */
         #template-case-studies .row.work .span {
           width: 100%; } }
-    /* line 797, scss/_layout.scss */
+    /* line 806, scss/_layout.scss */
     #template-case-studies .row.work .info {
       padding: 0 6% 30px;
       text-align: center;
       position: absolute;
       height: 100%; }
       @media only screen and (max-width: 800px) {
-        /* line 797, scss/_layout.scss */
+        /* line 806, scss/_layout.scss */
         #template-case-studies .row.work .info {
           padding: 0; } }
       @media only screen and (max-width: 600px) {
-        /* line 797, scss/_layout.scss */
+        /* line 806, scss/_layout.scss */
         #template-case-studies .row.work .info {
           position: relative;
           margin-top: 20px; } }
-      /* line 812, scss/_layout.scss */
+      /* line 821, scss/_layout.scss */
       #template-case-studies .row.work .info .centerer {
         width: 70%; }
         @media only screen and (max-width: 800px) {
-          /* line 812, scss/_layout.scss */
+          /* line 821, scss/_layout.scss */
           #template-case-studies .row.work .info .centerer {
             width: 100%; } }
-      /* line 820, scss/_layout.scss */
+      /* line 829, scss/_layout.scss */
       #template-case-studies .row.work .info .logo {
         margin-bottom: 10px; }
-    /* line 825, scss/_layout.scss */
+    /* line 834, scss/_layout.scss */
     #template-case-studies .row.work .image {
       padding-top: 30px; }
-  /* line 830, scss/_layout.scss */
+  /* line 839, scss/_layout.scss */
   #template-case-studies .footer {
     margin-top: 40px; }
-    /* line 833, scss/_layout.scss */
+    /* line 842, scss/_layout.scss */
     #template-case-studies .footer .button {
       font-size: 20px;
       font-size: 2rem;
@@ -2751,7 +2756,7 @@ body {
       font-weight: normal;
       padding: 30px 105px; }
 
-/* line 845, scss/_layout.scss */
+/* line 854, scss/_layout.scss */
 #single-work .header .content {
   padding-top: 17.83668%;
   -webkit-background-size: contain;
@@ -2762,7 +2767,7 @@ body {
   text-align: center;
   position: relative; }
   @media only screen and (max-width: 700px) {
-    /* line 845, scss/_layout.scss */
+    /* line 854, scss/_layout.scss */
     #single-work .header .content {
       height: 80px;
       -webkit-background-size: auto;
@@ -2770,58 +2775,58 @@ body {
       -o-background-size: auto;
       background-size: auto;
       background-position: center center; } }
-  /* line 859, scss/_layout.scss */
+  /* line 868, scss/_layout.scss */
   #single-work .header .content .title {
     font-family: 'Avenir LT W01 55 Roman';
     font-weight: normal;
     margin-top: 10px; }
-  /* line 864, scss/_layout.scss */
+  /* line 873, scss/_layout.scss */
   #single-work .header .content .vh-align-center {
     width: 20%; }
     @media only screen and (max-width: 700px) {
-      /* line 864, scss/_layout.scss */
+      /* line 873, scss/_layout.scss */
       #single-work .header .content .vh-align-center {
         width: 200px; } }
-    /* line 871, scss/_layout.scss */
+    /* line 880, scss/_layout.scss */
     #single-work .header .content .vh-align-center img {
       max-width: 100%;
       height: auto; }
       @media only screen and (max-width: 700px) {
-        /* line 871, scss/_layout.scss */
+        /* line 880, scss/_layout.scss */
         #single-work .header .content .vh-align-center img {
           width: 60%; } }
-/* line 883, scss/_layout.scss */
+/* line 892, scss/_layout.scss */
 #single-work #content {
   padding: 80px 0;
   background: #f7f7f7;
   position: relative; }
   @media only screen and (max-width: 600px) {
-    /* line 883, scss/_layout.scss */
+    /* line 892, scss/_layout.scss */
     #single-work #content {
       padding: 40px 0; } }
-  /* line 892, scss/_layout.scss */
+  /* line 901, scss/_layout.scss */
   #single-work #content img {
     max-width: 100%;
     height: auto; }
-/* line 898, scss/_layout.scss */
+/* line 907, scss/_layout.scss */
 #single-work .description {
   background: #efefef;
   padding: 80px 0 220px;
   text-align: justify; }
   @media only screen and (max-width: 900px) {
-    /* line 898, scss/_layout.scss */
+    /* line 907, scss/_layout.scss */
     #single-work .description {
       padding: 10% 0 15%; } }
   @media only screen and (max-width: 500px) {
-    /* line 898, scss/_layout.scss */
+    /* line 907, scss/_layout.scss */
     #single-work .description {
       padding: 10% 0 20%; } }
   @media only screen and (max-width: 500px) {
-    /* line 911, scss/_layout.scss */
+    /* line 920, scss/_layout.scss */
     #single-work .description .span {
       width: 100% !important;
       margin: 0 !important; } }
-  /* line 918, scss/_layout.scss */
+  /* line 927, scss/_layout.scss */
   #single-work .description .title {
     font-family: 'Avenir LT W01 95 Black';
     font-weight: normal;
@@ -2829,42 +2834,42 @@ body {
     font-size: 1.8rem;
     line-height: 1.5;
     margin-top: 20px; }
-  /* line 925, scss/_layout.scss */
+  /* line 934, scss/_layout.scss */
   #single-work .description p {
     color: #5e5e5e;
     font-size: 13px;
     font-size: 1.3rem;
     line-height: 1.7; }
-  /* line 931, scss/_layout.scss */
+  /* line 940, scss/_layout.scss */
   #single-work .description .link {
     margin-top: 45px;
     font-size: 18px;
     font-size: 1.8rem; }
 
-/* line 938, scss/_layout.scss */
+/* line 947, scss/_layout.scss */
 #archive-work {
   background: #f7f7f7;
   padding-top: 60px; }
-  /* line 942, scss/_layout.scss */
+  /* line 951, scss/_layout.scss */
   #archive-work .floatbtn {
     position: static; }
     @media only screen and (max-width: 700px) {
-      /* line 942, scss/_layout.scss */
+      /* line 951, scss/_layout.scss */
       #archive-work .floatbtn {
         display: block; } }
-  /* line 950, scss/_layout.scss */
+  /* line 959, scss/_layout.scss */
   #archive-work .categories {
     margin: 15px 0 30px 0; }
-    /* line 953, scss/_layout.scss */
+    /* line 962, scss/_layout.scss */
     #archive-work .categories ul {
       list-style-type: none;
       padding: 0; }
-      /* line 957, scss/_layout.scss */
+      /* line 966, scss/_layout.scss */
       #archive-work .categories ul li {
         float: left;
         margin-right: 5px;
         margin-bottom: 15px; }
-        /* line 962, scss/_layout.scss */
+        /* line 971, scss/_layout.scss */
         #archive-work .categories ul li a {
           font-family: 'Avenir LT W01 85 Heavy';
           font-weight: normal;
@@ -2877,16 +2882,16 @@ body {
           border-radius: 10px;
           padding: 9px 19px; }
           @media only screen and (max-width: 600px) {
-            /* line 962, scss/_layout.scss */
+            /* line 971, scss/_layout.scss */
             #archive-work .categories ul li a {
               font-size: 14px;
               font-size: 1.4rem;
               padding: 6px 15px; } }
-          /* line 973, scss/_layout.scss */
+          /* line 982, scss/_layout.scss */
           #archive-work .categories ul li a:hover, #archive-work .categories ul li a.current {
             background: #e4e4e4;
             color: #333; }
-  /* line 982, scss/_layout.scss */
+  /* line 991, scss/_layout.scss */
   #archive-work .item {
     background: #FFF;
     text-align: center;
@@ -2898,85 +2903,85 @@ body {
     height: 300px;
     position: relative; }
     @media only screen and (max-width: 800px) {
-      /* line 982, scss/_layout.scss */
+      /* line 991, scss/_layout.scss */
       #archive-work .item {
         width: 50%; } }
     @media only screen and (max-width: 500px) {
-      /* line 982, scss/_layout.scss */
+      /* line 991, scss/_layout.scss */
       #archive-work .item {
         width: 100%; } }
-    /* line 1001, scss/_layout.scss */
+    /* line 1010, scss/_layout.scss */
     #archive-work .item .work {
       display: table;
       width: 100%;
       height: 130px; }
-    /* line 1007, scss/_layout.scss */
+    /* line 1016, scss/_layout.scss */
     #archive-work .item .info {
       display: table-cell;
       vertical-align: middle;
       width: 100%; }
-      /* line 1012, scss/_layout.scss */
+      /* line 1021, scss/_layout.scss */
       #archive-work .item .info .title {
         padding: 0 10%; }
-    /* line 1017, scss/_layout.scss */
+    /* line 1026, scss/_layout.scss */
     #archive-work .item .image {
       position: absolute;
       bottom: 0;
       width: 80%;
       margin: 0 10%;
       left: 0; }
-    /* line 1027, scss/_layout.scss */
+    /* line 1036, scss/_layout.scss */
     #archive-work .item.overlay-btn:after {
       padding-top: 35%; }
 
-/* line 1036, scss/_layout.scss */
+/* line 1045, scss/_layout.scss */
 #contact .sidebar {
   background: #f7f7f7;
   position: relative;
   padding: 0; }
-  /* line 1042, scss/_layout.scss */
+  /* line 1051, scss/_layout.scss */
   #contact .sidebar .lead {
     background: #fbe88e; }
-    /* line 1045, scss/_layout.scss */
+    /* line 1054, scss/_layout.scss */
     #contact .sidebar .lead > .inner {
       max-width: 270px;
       padding: 60px 18% 50px;
       float: right; }
       @media only screen and (max-width: 700px) {
-        /* line 1045, scss/_layout.scss */
+        /* line 1054, scss/_layout.scss */
         #contact .sidebar .lead > .inner {
           padding: 60px 10% 50px; } }
       @media only screen and (max-width: 600px) {
-        /* line 1045, scss/_layout.scss */
+        /* line 1054, scss/_layout.scss */
         #contact .sidebar .lead > .inner {
           padding: 40px 5% 30px; } }
       @media only screen and (max-width: 500px) {
-        /* line 1045, scss/_layout.scss */
+        /* line 1054, scss/_layout.scss */
         #contact .sidebar .lead > .inner {
           float: none;
           max-width: 100%; } }
-  /* line 1065, scss/_layout.scss */
+  /* line 1074, scss/_layout.scss */
   #contact .sidebar .information {
     padding: 40px 18%;
     float: right;
     max-width: 270px; }
     @media only screen and (max-width: 700px) {
-      /* line 1065, scss/_layout.scss */
+      /* line 1074, scss/_layout.scss */
       #contact .sidebar .information {
         padding: 40px 10%; } }
     @media only screen and (max-width: 600px) {
-      /* line 1065, scss/_layout.scss */
+      /* line 1074, scss/_layout.scss */
       #contact .sidebar .information {
         padding: 40px 5%; } }
     @media only screen and (max-width: 500px) {
-      /* line 1065, scss/_layout.scss */
+      /* line 1074, scss/_layout.scss */
       #contact .sidebar .information {
         float: none;
         max-width: 100%; } }
-    /* line 1083, scss/_layout.scss */
+    /* line 1092, scss/_layout.scss */
     #contact .sidebar .information .link, #contact .sidebar .information .icon {
       margin-bottom: 15px; }
-    /* line 1087, scss/_layout.scss */
+    /* line 1096, scss/_layout.scss */
     #contact .sidebar .information .bottom {
       font-size: 16px;
       font-size: 1.6rem;
@@ -2985,16 +2990,16 @@ body {
       display: block;
       max-width: 100%; }
       @media only screen and (max-width: 500px) {
-        /* line 1087, scss/_layout.scss */
+        /* line 1096, scss/_layout.scss */
         #contact .sidebar .information .bottom {
           margin: 50px 0 35px; } }
-/* line 1103, scss/_layout.scss */
+/* line 1112, scss/_layout.scss */
 #contact .map {
   background: url(../images/backgrounds/dark_squares.jpg) left top repeat;
   padding-top: 10px;
   padding: 0;
   color: #FFF; }
-  /* line 1109, scss/_layout.scss */
+  /* line 1118, scss/_layout.scss */
   #contact .map .inner {
     position: absolute;
     width: 100%;
@@ -3002,39 +3007,39 @@ body {
     bottom: 0;
     top: 0;
     overflow: hidden; }
-    /* line 1117, scss/_layout.scss */
+    /* line 1126, scss/_layout.scss */
     #contact .map .inner .flex-container {
       height: 100%; }
       @media only screen and (max-width: 500px) {
-        /* line 1117, scss/_layout.scss */
+        /* line 1126, scss/_layout.scss */
         #contact .map .inner .flex-container {
           height: 0; } }
     @media only screen and (max-width: 500px) {
-      /* line 1109, scss/_layout.scss */
+      /* line 1118, scss/_layout.scss */
       #contact .map .inner {
         position: static; } }
 
-/* line 1134, scss/_layout.scss */
+/* line 1143, scss/_layout.scss */
 #project-planner .first-row, #project-planner .third-row, #form-want-a-job .first-row, #form-want-a-job .third-row {
   background: #f1f1f1; }
-/* line 1138, scss/_layout.scss */
+/* line 1147, scss/_layout.scss */
 #project-planner .second-row, #project-planner .fourth-row, #form-want-a-job .second-row, #form-want-a-job .fourth-row {
   background: #f7f7f7; }
-/* line 1142, scss/_layout.scss */
+/* line 1151, scss/_layout.scss */
 #project-planner .gform_page_footer, #form-want-a-job .gform_page_footer {
   display: none; }
-  /* line 1145, scss/_layout.scss */
+  /* line 1154, scss/_layout.scss */
   #project-planner .gform_page_footer .button.gform_next_button, #project-planner .gform_page_footer .button.gform_previous_button, #form-want-a-job .gform_page_footer .button.gform_next_button, #form-want-a-job .gform_page_footer .button.gform_previous_button {
     display: none; }
-/* line 1151, scss/_layout.scss */
+/* line 1160, scss/_layout.scss */
 #project-planner .second-row .gfield_label, #form-want-a-job .second-row .gfield_label {
   font-size: 20px;
   font-size: 2rem;
   margin-bottom: 25px; }
-/* line 1158, scss/_layout.scss */
+/* line 1167, scss/_layout.scss */
 #project-planner .fourth-row .gform_fields, #form-want-a-job .fourth-row .gform_fields {
   display: none; }
-/* line 1162, scss/_layout.scss */
+/* line 1171, scss/_layout.scss */
 #project-planner .fourth-row .gform_page_footer, #form-want-a-job .fourth-row .gform_page_footer {
   display: block;
   margin: 0;
@@ -3042,7 +3047,7 @@ body {
   border: none;
   text-align: center;
   background: #f1f1f1; }
-  /* line 1170, scss/_layout.scss */
+  /* line 1179, scss/_layout.scss */
   #project-planner .fourth-row .gform_page_footer .button-sub, #form-want-a-job .fourth-row .gform_page_footer .button-sub {
     color: #a2a2a2;
     font-size: 18px;
@@ -3050,20 +3055,20 @@ body {
     font-family: 'Avenir LT W01 85 Heavy';
     font-weight: normal;
     margin-top: 20px; }
-/* line 1180, scss/_layout.scss */
+/* line 1189, scss/_layout.scss */
 #project-planner .fourth-row .ui-rangeSlider, #form-want-a-job .fourth-row .ui-rangeSlider {
   margin-top: 70px;
   margin-bottom: 50px; }
-/* line 1187, scss/_layout.scss */
+/* line 1196, scss/_layout.scss */
 #project-planner .gform_wrapper, #form-want-a-job .gform_wrapper {
   margin: 0; }
-  /* line 1191, scss/_layout.scss */
+  /* line 1200, scss/_layout.scss */
   #project-planner .gform_wrapper .top_label .gfield_error, #form-want-a-job .gform_wrapper .top_label .gfield_error {
     width: 30%; }
-  /* line 1196, scss/_layout.scss */
+  /* line 1205, scss/_layout.scss */
   #project-planner .gform_wrapper .gf_page_steps, #form-want-a-job .gform_wrapper .gf_page_steps {
     display: none; }
-  /* line 1202, scss/_layout.scss */
+  /* line 1211, scss/_layout.scss */
   #project-planner .gform_wrapper .gform_body .gf_step, #form-want-a-job .gform_wrapper .gform_body .gf_step {
     font-family: 'Avenir LT W01 85 Heavy';
     font-weight: normal;
@@ -3073,19 +3078,19 @@ body {
     opacity: 1 !important;
     margin-bottom: 40px;
     line-height: 1em !important; }
-    /* line 1210, scss/_layout.scss */
+    /* line 1219, scss/_layout.scss */
     #project-planner .gform_wrapper .gform_body .gf_step .gf_step_number, #form-want-a-job .gform_wrapper .gform_body .gf_step .gf_step_number {
       display: none; }
-  /* line 1215, scss/_layout.scss */
+  /* line 1224, scss/_layout.scss */
   #project-planner .gform_wrapper .gform_body .gform_page_fields:before, #project-planner .gform_wrapper .gform_body .gform_page_fields:after, #form-want-a-job .gform_wrapper .gform_body .gform_page_fields:before, #form-want-a-job .gform_wrapper .gform_body .gform_page_fields:after {
     content: " ";
     /* 1 */
     display: table;
     /* 2 */ }
-  /* line 1220, scss/_layout.scss */
+  /* line 1229, scss/_layout.scss */
   #project-planner .gform_wrapper .gform_body .gform_page_fields:after, #form-want-a-job .gform_wrapper .gform_body .gform_page_fields:after {
     clear: both; }
-  /* line 1224, scss/_layout.scss */
+  /* line 1233, scss/_layout.scss */
   #project-planner .gform_wrapper .gform_body .gform_page_fields, #form-want-a-job .gform_wrapper .gform_body .gform_page_fields {
     padding: 60px 0;
     width: 90%;
@@ -3095,24 +3100,24 @@ body {
     position: relative;
     *zoom: 1; }
     @media only screen and (max-width: 700px) {
-      /* line 1224, scss/_layout.scss */
+      /* line 1233, scss/_layout.scss */
       #project-planner .gform_wrapper .gform_body .gform_page_fields, #form-want-a-job .gform_wrapper .gform_body .gform_page_fields {
         width: 95%; } }
-  /* line 1242, scss/_layout.scss */
+  /* line 1251, scss/_layout.scss */
   #project-planner .gform_wrapper .gform_body ul li.gfield, #form-want-a-job .gform_wrapper .gform_body ul li.gfield {
     clear: none; }
-  /* line 1248, scss/_layout.scss */
+  /* line 1257, scss/_layout.scss */
   #project-planner .gform_wrapper .gform_body .gform_page, #form-want-a-job .gform_wrapper .gform_body .gform_page {
     display: block !important; }
 
-/* line 1258, scss/_layout.scss */
+/* line 1267, scss/_layout.scss */
 #form-want-a-job .fourth-row .gform_fields {
   display: block; }
-/* line 1264, scss/_layout.scss */
+/* line 1273, scss/_layout.scss */
 #form-want-a-job .file-upload .ginput_container {
   border: 1px solid #c6c6c6;
   background: #f1f1f1;
   padding: 30px 50px; }
-  /* line 1269, scss/_layout.scss */
+  /* line 1278, scss/_layout.scss */
   #form-want-a-job .file-upload .ginput_container input {
     width: 100% !important; }

@@ -605,7 +605,7 @@ body {
 					width: 45%;
 					float: left;
 					margin-right: 0;
-					margin-left: 5%;				
+					margin-left: 2%;				
 
 					@include device-width(7) {
 						width: 55%;
@@ -816,7 +816,15 @@ body {
 			@include device-width(6) {
 				position: relative;
 				margin-top: 20px;
-			}		
+			}	
+
+			.centerer {
+				width: 70%;
+
+				@include device-width(8) {
+					width: 100%;
+				}
+			}				
 
 			.logo {
 				margin-bottom: 10px;

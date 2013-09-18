@@ -2562,7 +2562,7 @@ body {
         width: 45%;
         float: left;
         margin-right: 0;
-        margin-left: 5%; }
+        margin-left: 2%; }
         @media only screen and (max-width: 700px) {
           /* line 604, scss/_layout.scss */
           #about-us #meet-the-team .row.even .text {
@@ -2733,15 +2733,22 @@ body {
           position: relative;
           margin-top: 20px; } }
       /* line 821, scss/_layout.scss */
+      #template-case-studies .row.work .info .centerer {
+        width: 70%; }
+        @media only screen and (max-width: 800px) {
+          /* line 821, scss/_layout.scss */
+          #template-case-studies .row.work .info .centerer {
+            width: 100%; } }
+      /* line 829, scss/_layout.scss */
       #template-case-studies .row.work .info .logo {
         margin-bottom: 10px; }
-    /* line 826, scss/_layout.scss */
+    /* line 834, scss/_layout.scss */
     #template-case-studies .row.work .image {
       padding-top: 30px; }
-  /* line 831, scss/_layout.scss */
+  /* line 839, scss/_layout.scss */
   #template-case-studies .footer {
     margin-top: 40px; }
-    /* line 834, scss/_layout.scss */
+    /* line 842, scss/_layout.scss */
     #template-case-studies .footer .button {
       font-size: 20px;
       font-size: 2rem;
@@ -2749,7 +2756,7 @@ body {
       font-weight: normal;
       padding: 30px 105px; }
 
-/* line 846, scss/_layout.scss */
+/* line 854, scss/_layout.scss */
 #single-work .header .content {
   padding-top: 17.83668%;
   -webkit-background-size: contain;
@@ -2760,7 +2767,7 @@ body {
   text-align: center;
   position: relative; }
   @media only screen and (max-width: 700px) {
-    /* line 846, scss/_layout.scss */
+    /* line 854, scss/_layout.scss */
     #single-work .header .content {
       height: 80px;
       -webkit-background-size: auto;
@@ -2768,58 +2775,58 @@ body {
       -o-background-size: auto;
       background-size: auto;
       background-position: center center; } }
-  /* line 860, scss/_layout.scss */
+  /* line 868, scss/_layout.scss */
   #single-work .header .content .title {
     font-family: 'Avenir LT W01 55 Roman';
     font-weight: normal;
     margin-top: 10px; }
-  /* line 865, scss/_layout.scss */
+  /* line 873, scss/_layout.scss */
   #single-work .header .content .vh-align-center {
     width: 20%; }
     @media only screen and (max-width: 700px) {
-      /* line 865, scss/_layout.scss */
+      /* line 873, scss/_layout.scss */
       #single-work .header .content .vh-align-center {
         width: 200px; } }
-    /* line 872, scss/_layout.scss */
+    /* line 880, scss/_layout.scss */
     #single-work .header .content .vh-align-center img {
       max-width: 100%;
       height: auto; }
       @media only screen and (max-width: 700px) {
-        /* line 872, scss/_layout.scss */
+        /* line 880, scss/_layout.scss */
         #single-work .header .content .vh-align-center img {
           width: 60%; } }
-/* line 884, scss/_layout.scss */
+/* line 892, scss/_layout.scss */
 #single-work #content {
   padding: 80px 0;
   background: #f7f7f7;
   position: relative; }
   @media only screen and (max-width: 600px) {
-    /* line 884, scss/_layout.scss */
+    /* line 892, scss/_layout.scss */
     #single-work #content {
       padding: 40px 0; } }
-  /* line 893, scss/_layout.scss */
+  /* line 901, scss/_layout.scss */
   #single-work #content img {
     max-width: 100%;
     height: auto; }
-/* line 899, scss/_layout.scss */
+/* line 907, scss/_layout.scss */
 #single-work .description {
   background: #efefef;
   padding: 80px 0 220px;
   text-align: justify; }
   @media only screen and (max-width: 900px) {
-    /* line 899, scss/_layout.scss */
+    /* line 907, scss/_layout.scss */
     #single-work .description {
       padding: 10% 0 15%; } }
   @media only screen and (max-width: 500px) {
-    /* line 899, scss/_layout.scss */
+    /* line 907, scss/_layout.scss */
     #single-work .description {
       padding: 10% 0 20%; } }
   @media only screen and (max-width: 500px) {
-    /* line 912, scss/_layout.scss */
+    /* line 920, scss/_layout.scss */
     #single-work .description .span {
       width: 100% !important;
       margin: 0 !important; } }
-  /* line 919, scss/_layout.scss */
+  /* line 927, scss/_layout.scss */
   #single-work .description .title {
     font-family: 'Avenir LT W01 95 Black';
     font-weight: normal;
@@ -2827,42 +2834,42 @@ body {
     font-size: 1.8rem;
     line-height: 1.5;
     margin-top: 20px; }
-  /* line 926, scss/_layout.scss */
+  /* line 934, scss/_layout.scss */
   #single-work .description p {
     color: #5e5e5e;
     font-size: 13px;
     font-size: 1.3rem;
     line-height: 1.7; }
-  /* line 932, scss/_layout.scss */
+  /* line 940, scss/_layout.scss */
   #single-work .description .link {
     margin-top: 45px;
     font-size: 18px;
     font-size: 1.8rem; }
 
-/* line 939, scss/_layout.scss */
+/* line 947, scss/_layout.scss */
 #archive-work {
   background: #f7f7f7;
   padding-top: 60px; }
-  /* line 943, scss/_layout.scss */
+  /* line 951, scss/_layout.scss */
   #archive-work .floatbtn {
     position: static; }
     @media only screen and (max-width: 700px) {
-      /* line 943, scss/_layout.scss */
+      /* line 951, scss/_layout.scss */
       #archive-work .floatbtn {
         display: block; } }
-  /* line 951, scss/_layout.scss */
+  /* line 959, scss/_layout.scss */
   #archive-work .categories {
     margin: 15px 0 30px 0; }
-    /* line 954, scss/_layout.scss */
+    /* line 962, scss/_layout.scss */
     #archive-work .categories ul {
       list-style-type: none;
       padding: 0; }
-      /* line 958, scss/_layout.scss */
+      /* line 966, scss/_layout.scss */
       #archive-work .categories ul li {
         float: left;
         margin-right: 5px;
         margin-bottom: 15px; }
-        /* line 963, scss/_layout.scss */
+        /* line 971, scss/_layout.scss */
         #archive-work .categories ul li a {
           font-family: 'Avenir LT W01 85 Heavy';
           font-weight: normal;
@@ -2875,16 +2882,16 @@ body {
           border-radius: 10px;
           padding: 9px 19px; }
           @media only screen and (max-width: 600px) {
-            /* line 963, scss/_layout.scss */
+            /* line 971, scss/_layout.scss */
             #archive-work .categories ul li a {
               font-size: 14px;
               font-size: 1.4rem;
               padding: 6px 15px; } }
-          /* line 974, scss/_layout.scss */
+          /* line 982, scss/_layout.scss */
           #archive-work .categories ul li a:hover, #archive-work .categories ul li a.current {
             background: #e4e4e4;
             color: #333; }
-  /* line 983, scss/_layout.scss */
+  /* line 991, scss/_layout.scss */
   #archive-work .item {
     background: #FFF;
     text-align: center;
@@ -2896,88 +2903,88 @@ body {
     height: 300px;
     position: relative; }
     @media only screen and (max-width: 800px) {
-      /* line 983, scss/_layout.scss */
+      /* line 991, scss/_layout.scss */
       #archive-work .item {
         width: 50%; } }
     @media only screen and (max-width: 500px) {
-      /* line 983, scss/_layout.scss */
+      /* line 991, scss/_layout.scss */
       #archive-work .item {
         width: 100%; } }
-    /* line 1002, scss/_layout.scss */
+    /* line 1010, scss/_layout.scss */
     #archive-work .item .inner {
       display: table;
       width: 100%;
       height: 100px; }
-    /* line 1008, scss/_layout.scss */
+    /* line 1016, scss/_layout.scss */
     #archive-work .item .info {
       display: table-cell;
       vertical-align: middle;
       width: 100%; }
-      /* line 1014, scss/_layout.scss */
+      /* line 1022, scss/_layout.scss */
       #archive-work .item .info .logo img {
         max-height: 100%; }
-    /* line 1020, scss/_layout.scss */
+    /* line 1028, scss/_layout.scss */
     #archive-work .item .title {
       padding: 0 10%; }
-    /* line 1024, scss/_layout.scss */
+    /* line 1032, scss/_layout.scss */
     #archive-work .item .image {
       position: absolute;
       bottom: 0;
       width: 80%;
       margin: 0 10%;
       left: 0; }
-    /* line 1034, scss/_layout.scss */
+    /* line 1042, scss/_layout.scss */
     #archive-work .item.overlay-btn:after {
       padding-top: 35%; }
 
-/* line 1043, scss/_layout.scss */
+/* line 1051, scss/_layout.scss */
 #contact .sidebar {
   background: #f7f7f7;
   position: relative;
   padding: 0; }
-  /* line 1049, scss/_layout.scss */
+  /* line 1057, scss/_layout.scss */
   #contact .sidebar .lead {
     background: #fbe88e; }
-    /* line 1052, scss/_layout.scss */
+    /* line 1060, scss/_layout.scss */
     #contact .sidebar .lead > .inner {
       max-width: 270px;
       padding: 60px 18% 50px;
       float: right; }
       @media only screen and (max-width: 700px) {
-        /* line 1052, scss/_layout.scss */
+        /* line 1060, scss/_layout.scss */
         #contact .sidebar .lead > .inner {
           padding: 60px 10% 50px; } }
       @media only screen and (max-width: 600px) {
-        /* line 1052, scss/_layout.scss */
+        /* line 1060, scss/_layout.scss */
         #contact .sidebar .lead > .inner {
           padding: 40px 5% 30px; } }
       @media only screen and (max-width: 500px) {
-        /* line 1052, scss/_layout.scss */
+        /* line 1060, scss/_layout.scss */
         #contact .sidebar .lead > .inner {
           float: none;
           max-width: 100%; } }
-  /* line 1072, scss/_layout.scss */
+  /* line 1080, scss/_layout.scss */
   #contact .sidebar .information {
     padding: 40px 18%;
     float: right;
     max-width: 270px; }
     @media only screen and (max-width: 700px) {
-      /* line 1072, scss/_layout.scss */
+      /* line 1080, scss/_layout.scss */
       #contact .sidebar .information {
         padding: 40px 10%; } }
     @media only screen and (max-width: 600px) {
-      /* line 1072, scss/_layout.scss */
+      /* line 1080, scss/_layout.scss */
       #contact .sidebar .information {
         padding: 40px 5%; } }
     @media only screen and (max-width: 500px) {
-      /* line 1072, scss/_layout.scss */
+      /* line 1080, scss/_layout.scss */
       #contact .sidebar .information {
         float: none;
         max-width: 100%; } }
-    /* line 1090, scss/_layout.scss */
+    /* line 1098, scss/_layout.scss */
     #contact .sidebar .information .link, #contact .sidebar .information .icon {
       margin-bottom: 15px; }
-    /* line 1094, scss/_layout.scss */
+    /* line 1102, scss/_layout.scss */
     #contact .sidebar .information .bottom {
       font-size: 16px;
       font-size: 1.6rem;
@@ -2986,16 +2993,16 @@ body {
       display: block;
       max-width: 100%; }
       @media only screen and (max-width: 500px) {
-        /* line 1094, scss/_layout.scss */
+        /* line 1102, scss/_layout.scss */
         #contact .sidebar .information .bottom {
           margin: 50px 0 35px; } }
-/* line 1110, scss/_layout.scss */
+/* line 1118, scss/_layout.scss */
 #contact .map {
   background: url(../images/backgrounds/dark_squares.jpg) left top repeat;
   padding-top: 10px;
   padding: 0;
   color: #FFF; }
-  /* line 1116, scss/_layout.scss */
+  /* line 1124, scss/_layout.scss */
   #contact .map .inner {
     position: absolute;
     width: 100%;
@@ -3003,39 +3010,39 @@ body {
     bottom: 0;
     top: 0;
     overflow: hidden; }
-    /* line 1124, scss/_layout.scss */
+    /* line 1132, scss/_layout.scss */
     #contact .map .inner .flex-container {
       height: 100%; }
       @media only screen and (max-width: 500px) {
-        /* line 1124, scss/_layout.scss */
+        /* line 1132, scss/_layout.scss */
         #contact .map .inner .flex-container {
           height: 0; } }
     @media only screen and (max-width: 500px) {
-      /* line 1116, scss/_layout.scss */
+      /* line 1124, scss/_layout.scss */
       #contact .map .inner {
         position: static; } }
 
-/* line 1141, scss/_layout.scss */
+/* line 1149, scss/_layout.scss */
 #project-planner .first-row, #project-planner .third-row, #form-want-a-job .first-row, #form-want-a-job .third-row {
   background: #f1f1f1; }
-/* line 1145, scss/_layout.scss */
+/* line 1153, scss/_layout.scss */
 #project-planner .second-row, #project-planner .fourth-row, #form-want-a-job .second-row, #form-want-a-job .fourth-row {
   background: #f7f7f7; }
-/* line 1149, scss/_layout.scss */
+/* line 1157, scss/_layout.scss */
 #project-planner .gform_page_footer, #form-want-a-job .gform_page_footer {
   display: none; }
-  /* line 1152, scss/_layout.scss */
+  /* line 1160, scss/_layout.scss */
   #project-planner .gform_page_footer .button.gform_next_button, #project-planner .gform_page_footer .button.gform_previous_button, #form-want-a-job .gform_page_footer .button.gform_next_button, #form-want-a-job .gform_page_footer .button.gform_previous_button {
     display: none; }
-/* line 1158, scss/_layout.scss */
+/* line 1166, scss/_layout.scss */
 #project-planner .second-row .gfield_label, #form-want-a-job .second-row .gfield_label {
   font-size: 20px;
   font-size: 2rem;
   margin-bottom: 25px; }
-/* line 1165, scss/_layout.scss */
+/* line 1173, scss/_layout.scss */
 #project-planner .fourth-row .gform_fields, #form-want-a-job .fourth-row .gform_fields {
   display: none; }
-/* line 1169, scss/_layout.scss */
+/* line 1177, scss/_layout.scss */
 #project-planner .fourth-row .gform_page_footer, #form-want-a-job .fourth-row .gform_page_footer {
   display: block;
   margin: 0;
@@ -3043,7 +3050,7 @@ body {
   border: none;
   text-align: center;
   background: #f1f1f1; }
-  /* line 1177, scss/_layout.scss */
+  /* line 1185, scss/_layout.scss */
   #project-planner .fourth-row .gform_page_footer .button-sub, #form-want-a-job .fourth-row .gform_page_footer .button-sub {
     color: #a2a2a2;
     font-size: 18px;
@@ -3051,20 +3058,20 @@ body {
     font-family: 'Avenir LT W01 85 Heavy';
     font-weight: normal;
     margin-top: 20px; }
-/* line 1187, scss/_layout.scss */
+/* line 1195, scss/_layout.scss */
 #project-planner .fourth-row .ui-rangeSlider, #form-want-a-job .fourth-row .ui-rangeSlider {
   margin-top: 70px;
   margin-bottom: 50px; }
-/* line 1194, scss/_layout.scss */
+/* line 1202, scss/_layout.scss */
 #project-planner .gform_wrapper, #form-want-a-job .gform_wrapper {
   margin: 0; }
-  /* line 1198, scss/_layout.scss */
+  /* line 1206, scss/_layout.scss */
   #project-planner .gform_wrapper .top_label .gfield_error, #form-want-a-job .gform_wrapper .top_label .gfield_error {
     width: 30%; }
-  /* line 1203, scss/_layout.scss */
+  /* line 1211, scss/_layout.scss */
   #project-planner .gform_wrapper .gf_page_steps, #form-want-a-job .gform_wrapper .gf_page_steps {
     display: none; }
-  /* line 1209, scss/_layout.scss */
+  /* line 1217, scss/_layout.scss */
   #project-planner .gform_wrapper .gform_body .gf_step, #form-want-a-job .gform_wrapper .gform_body .gf_step {
     font-family: 'Avenir LT W01 85 Heavy';
     font-weight: normal;
@@ -3074,19 +3081,19 @@ body {
     opacity: 1 !important;
     margin-bottom: 40px;
     line-height: 1em !important; }
-    /* line 1217, scss/_layout.scss */
+    /* line 1225, scss/_layout.scss */
     #project-planner .gform_wrapper .gform_body .gf_step .gf_step_number, #form-want-a-job .gform_wrapper .gform_body .gf_step .gf_step_number {
       display: none; }
-  /* line 1222, scss/_layout.scss */
+  /* line 1230, scss/_layout.scss */
   #project-planner .gform_wrapper .gform_body .gform_page_fields:before, #project-planner .gform_wrapper .gform_body .gform_page_fields:after, #form-want-a-job .gform_wrapper .gform_body .gform_page_fields:before, #form-want-a-job .gform_wrapper .gform_body .gform_page_fields:after {
     content: " ";
     /* 1 */
     display: table;
     /* 2 */ }
-  /* line 1227, scss/_layout.scss */
+  /* line 1235, scss/_layout.scss */
   #project-planner .gform_wrapper .gform_body .gform_page_fields:after, #form-want-a-job .gform_wrapper .gform_body .gform_page_fields:after {
     clear: both; }
-  /* line 1231, scss/_layout.scss */
+  /* line 1239, scss/_layout.scss */
   #project-planner .gform_wrapper .gform_body .gform_page_fields, #form-want-a-job .gform_wrapper .gform_body .gform_page_fields {
     padding: 60px 0;
     width: 90%;
@@ -3096,24 +3103,24 @@ body {
     position: relative;
     *zoom: 1; }
     @media only screen and (max-width: 700px) {
-      /* line 1231, scss/_layout.scss */
+      /* line 1239, scss/_layout.scss */
       #project-planner .gform_wrapper .gform_body .gform_page_fields, #form-want-a-job .gform_wrapper .gform_body .gform_page_fields {
         width: 95%; } }
-  /* line 1249, scss/_layout.scss */
+  /* line 1257, scss/_layout.scss */
   #project-planner .gform_wrapper .gform_body ul li.gfield, #form-want-a-job .gform_wrapper .gform_body ul li.gfield {
     clear: none; }
-  /* line 1255, scss/_layout.scss */
+  /* line 1263, scss/_layout.scss */
   #project-planner .gform_wrapper .gform_body .gform_page, #form-want-a-job .gform_wrapper .gform_body .gform_page {
     display: block !important; }
 
-/* line 1265, scss/_layout.scss */
+/* line 1273, scss/_layout.scss */
 #form-want-a-job .fourth-row .gform_fields {
   display: block; }
-/* line 1271, scss/_layout.scss */
+/* line 1279, scss/_layout.scss */
 #form-want-a-job .file-upload .ginput_container {
   border: 1px solid #c6c6c6;
   background: #f1f1f1;
   padding: 30px 50px; }
-  /* line 1276, scss/_layout.scss */
+  /* line 1284, scss/_layout.scss */
   #form-want-a-job .file-upload .ginput_container input {
     width: 100% !important; }

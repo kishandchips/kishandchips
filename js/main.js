@@ -237,7 +237,7 @@
 			},
 
 			anchor: function() {
-				$('.child-page a:not(.link, .title)').on('click', function(e) {
+				$('.child-page a:not(.link, .title, .otherpage)').on('click', function(e) {
 					e.preventDefault();
 					var target = $(this).attr('href');
 				
@@ -294,7 +294,6 @@
 					for (i = 0 ; i < rowDivs.length ; i++) {
 						rowDivs[i].height(currTallest);
 					}
-
 				});
 			}
 		},

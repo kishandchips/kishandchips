@@ -13,7 +13,7 @@
 		case 'row':	
 			if(get_sub_field('column')):
 ?>
-			<div class="row" style="background-color: <?php the_sub_field('background_color') ?>; background-image: url(<?php echo $background_image[0]; ?>); <?php the_sub_field('css'); ?>">
+			<div id="<?php the_sub_field('anchor_tag'); ?>" class="row" style="background-color: <?php the_sub_field('background_color') ?>; background-image: url(<?php echo $background_image[0]; ?>); <?php the_sub_field('css'); ?>">
 				<div class="container">
 					<div class="inner clearfix">
 					

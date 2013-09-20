@@ -733,6 +733,10 @@ button {
 	&.mail {
 		background: url('../images/icons/mail.png') left top no-repeat;
 		padding: 0 0.1rem 0.3rem 2.8rem;
+
+		@include device-width(4) {
+			padding: 0.3rem 0.1rem 0.3rem 2.8rem;
+		}
 	}
 
 	&.more-btn {
@@ -1158,6 +1162,44 @@ input[type=reset], .button {
 		font-size: 1em;
 	}
 }
+
+.gfield_checkbox {
+
+	li {
+		input[type=checkbox] {
+			position: absolute; 
+			overflow: hidden; 
+			clip: rect(0 0 0 0); 
+			height:1px; 
+			width:1px; 
+			margin:-1px; 
+			padding:0;
+			border:0;
+		}
+
+		input[type=checkbox] + label {
+			padding-left:34px;
+			height:23px; 
+			display:inline-block;
+			line-height:23px;
+			background-repeat:no-repeat;
+			background-position: 0 0;
+			vertical-align:middle;
+			cursor:pointer;
+		}
+
+		input[type=checkbox]:checked + label {
+			@include transition(none);
+			background-position: 0 -23px;
+		}
+
+		label{
+			background-image:url(../images/buttons/checkbox.jpg);
+		}
+	}
+
+}
+
 
 a.button {
 	width: auto;

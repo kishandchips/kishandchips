@@ -210,9 +210,11 @@ body {
 						font-size: 100%;
 					}									
 
-					@include device-width(3) {
-						width: 100%;
+					@include device-width(4) {
+						width: 120px;
 						display: block;
+						float: left;
+						clear: left;
 					}						
 				}						
 			}
@@ -227,12 +229,17 @@ body {
 				}		
 
 				@media only screen and (max-width: 330px){	
-					font-size: 62.5%;
+					font-size: 75%;
 				}						
 			}
 		}
 
 		.socials {
+
+			@include device-width(4) {	
+				padding-left: 142px;
+				padding-top: 10px;
+			}
 
 			a {
 				@include font-size(34);
@@ -281,7 +288,16 @@ body {
 /* =============================================================================
    Pages
    ========================================================================== */
+#content {
 
+	.span {
+		padding: 40px 10px;
+
+		@include device-width(5) {
+			padding: 20px 10px;
+		}
+	}
+}
 
 #front-page {
 
@@ -301,7 +317,7 @@ body {
 			text-align: center;
 
 			@include device-width(8) {
-				@include font-size(25);
+				@include font-size(23);
 			}				
 
 			@include device-width(6) {
@@ -309,7 +325,7 @@ body {
 			}				
 
 			@include device-width(4) {
-				@include font-size(30);
+				@include font-size(25);
 
 				span {
 					display: block;
@@ -452,6 +468,36 @@ body {
 			@include device-width(6) {
 				padding: 0;
 			}
+
+			@include device-width(4) {
+				font-size: 200%;
+			}			
+		}
+
+		h4 {
+			@include device-width(4) {
+				font-size: 190%;
+				line-height: 100%;
+
+				span {
+					line-height: 1.4 !important;
+					font-size: 1.5rem !important;
+				}
+			}		
+		}	
+
+		.container {
+			max-width: 910px;
+
+			@include device-width(4) {
+				padding: 20px 0;
+			}	
+
+			.span {
+				@include device-width(4) {
+					padding: 0;
+				}
+			}						
 		}
 
 		.top-border {
@@ -459,21 +505,6 @@ body {
 			background-color: #222222;
 			@include filter-gradient(#222222, #fbe88e, horizontal);
 			@include background-image(linear-gradient(left,  #222222 0%,#222222 50%,#fbe88e 50%,#fbe88e 100%));
-		}
-
-		.container {
-			max-width: 910px;
-		}
-	}
-}
-
-#content {
-
-	.span {
-		padding: 40px 10px;
-
-		@include device-width(5) {
-			padding: 20px 10px;
 		}
 	}
 }
@@ -496,7 +527,7 @@ body {
 			}
 
 			@include device-width(5) {
-				padding: 40px 0 0 0;	
+				padding: 40px 10px 0;	
 			}			
 
 			&.third {
@@ -531,6 +562,10 @@ body {
 	#meet-the-team {
 		background: #f7f7f7;
 		padding:50px 0 80px;
+
+		@include device-width(5) {
+			padding:50px 10px 80px;
+		}
 
 		.row {
 			background: #FFF;
@@ -654,6 +689,10 @@ body {
 		.span {
 			padding: 0;
 		}	
+
+		.acc-close {
+			display: none;
+		}
 	}
 
 	.link {
@@ -804,7 +843,7 @@ body {
 
 
 		.info {
-			padding: 0 6% 30px;
+			padding: 0 8% 30px 4%;
 			text-align: center;
 			position: absolute;
 			height: 100%;
@@ -814,6 +853,7 @@ body {
 			}
 
 			@include device-width(6) {
+				padding: 0 6% 30px;
 				position: relative;
 				margin-top: 20px;
 			}	

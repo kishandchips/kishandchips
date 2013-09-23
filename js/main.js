@@ -55,6 +55,11 @@
 				});
 			}
 
+			$(".back-btn").on('click',function(event) {
+			    event.preventDefault();
+			    history.back(1);
+			});			
+
 			$(window).resize(this.resize);
 			this.resize();
 

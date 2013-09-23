@@ -210,9 +210,6 @@
 						$('.acc-open', parent).hide();
 					}					
 					item.slideToggle(300);
-
-
-							
 			},
 
 			close: function(id) {		

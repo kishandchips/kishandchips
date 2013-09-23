@@ -99,6 +99,9 @@ body {
 	
 			@include device-width(4) {
 				display: block;
+
+				&:hover {
+				}
 			}
 		}
 	}
@@ -695,9 +698,12 @@ body {
 		}
 	}
 
+	.actions {
+		margin-top: 30px;
+	}
+
 	.link {
 		@include font-size(14);
-		margin-top: 50px;
 	}
 
 	.close-bottom {
@@ -883,6 +889,10 @@ body {
 			@include font-size(20);
 			@include avenir-heavy;
 			padding: 30px 105px;
+
+			@include device-width(4) {
+				padding: 30px 75px;
+			}
 		}
 	}
 }

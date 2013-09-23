@@ -44,10 +44,11 @@ get_header(); ?>
 								<h3>
 									<a class="title" href="" data-id="<?php echo $id ?>"><?php the_title(); ?></a>
 								</h3>
-								<p>
-									<?php the_content(); ?>
-								</p><a href="<?php the_permalink(); ?>" class="link more-btn acc-open" data-id="<?php echo $id ?>">Read More</a>
-								<a href="" class="link close-btn acc-close hide" data-id="<?php echo $id ?>">Close</a>
+								<p><?php the_content(); ?></p>
+								<div class="actions">
+									<a href="<?php the_permalink(); ?>" class="link more-btn acc-open" data-id="<?php echo $id ?>">Read More</a>
+									<a href="" class="link close-btn acc-close hide" data-id="<?php echo $id ?>">Close</a>
+								</div>
 							</div>
 						</div>
 						<div class="accordion hide" data-id="<?php echo $id ?>">

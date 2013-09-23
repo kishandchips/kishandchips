@@ -44,7 +44,13 @@ $(function() {
 		 defaultValues:{
 			min: new Date(2013, 7, 11),
 			max: new Date(2013, 9, 10)
-		}
+		},
+		formatter:function(val){
+			var days = val.getDate(),
+			  	month = val.getMonth() + 1,
+			  	year = val.getFullYear();
+			return days + "/" + month + "/" + year;
+		}		
 	});
 
     $("#dateSlider").bind("valuesChanged", function(e, data){
@@ -55,6 +61,13 @@ $(function() {
     $("#slider").bind("valuesChanged", function(e, data){
 		$('#input_1_17').val('£' + data.values.min + 'K');
 		$('#input_1_18').val('£' + data.values.max + 'K');
+
+		if (data.values.max == 15) {
+			$('#slider .ui-rangeSlider-rightLabel .ui-rangeSlider-label-value').append('<span> +</span>');
+			$('#input_1_18').val('£' + data.values.max + 'K +');
+		} else {
+			$('#slider .ui-rangeSlider-rightLabel .ui-rangeSlider-label-value span').remove();
+		}
     });   
 
     $('#gform_target_page_number_1').attr('value','0');

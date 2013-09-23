@@ -1919,7 +1919,12 @@ fieldset {
 /* line 1444, scss/_classes.scss */
 .ui-rangeSlider {
   height: 22px; }
-  /* line 1447, scss/_classes.scss */
+  @media only screen and (max-height: 100px) {
+    /* line 1444, scss/_classes.scss */
+    .ui-rangeSlider {
+      width: 90%;
+      margin: 0 auto; } }
+  /* line 1452, scss/_classes.scss */
   .ui-rangeSlider .ui-rangeSlider-innerBar {
     height: 16px;
     margin: 3px 6px;
@@ -1929,11 +1934,11 @@ fieldset {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     border-radius: 10px; }
-  /* line 1454, scss/_classes.scss */
+  /* line 1459, scss/_classes.scss */
   .ui-rangeSlider .ui-rangeSlider-handle {
     width: 32px;
     height: 32px; }
-    /* line 1458, scss/_classes.scss */
+    /* line 1463, scss/_classes.scss */
     .ui-rangeSlider .ui-rangeSlider-handle > .ui-rangeSlider-handle-inner {
       width: 32px;
       height: 32px;
@@ -1941,13 +1946,13 @@ fieldset {
       background: url(../images/buttons/slider_handle.png) left top no-repeat;
       cursor: col-resize;
       margin-top: -5px; }
-    /* line 1469, scss/_classes.scss */
+    /* line 1474, scss/_classes.scss */
     .ui-rangeSlider .ui-rangeSlider-handle.ui-rangeSlider-leftHandle .ui-rangeSlider-handle-inner {
       margin-left: -16px; }
-    /* line 1476, scss/_classes.scss */
+    /* line 1481, scss/_classes.scss */
     .ui-rangeSlider .ui-rangeSlider-handle.ui-rangeSlider-rightHandle .ui-rangeSlider-handle-inner {
       margin-left: 16px; }
-  /* line 1482, scss/_classes.scss */
+  /* line 1487, scss/_classes.scss */
   .ui-rangeSlider .ui-rangeSlider-bar {
     margin: 1px 0;
     background: #CCC;
@@ -1956,43 +1961,45 @@ fieldset {
     cursor: move;
     cursor: grab;
     cursor: -moz-grab; }
-    /* line 1491, scss/_classes.scss */
+    /* line 1496, scss/_classes.scss */
     .ui-rangeSlider .ui-rangeSlider-bar.ui-draggable-dragging {
       cursor: -moz-grabbing;
       cursor: grabbing; }
 
-/* line 1498, scss/_classes.scss */
+/* line 1503, scss/_classes.scss */
 .ui-rangeSlider-arrow {
   height: 16px;
   margin: 2px 0;
   width: 16px;
   background-repeat: no-repeat; }
-  /* line 1504, scss/_classes.scss */
+  /* line 1509, scss/_classes.scss */
   .ui-rangeSlider-arrow.ui-rangeSlider-leftArrow {
     background-image: url("../images/icons/resultset_previous.png");
-    background-position: center left; }
-  /* line 1509, scss/_classes.scss */
+    background-position: center left;
+    left: -20px !important; }
+  /* line 1515, scss/_classes.scss */
   .ui-rangeSlider-arrow.ui-rangeSlider-rightArrow {
     background-image: url("../images/icons/resultset_next.png");
-    background-position: center right; }
+    background-position: center right;
+    right: -20px !important; }
 
-/* line 1515, scss/_classes.scss */
+/* line 1522, scss/_classes.scss */
 .ui-rangeSlider-arrow-inner {
   display: none; }
 
-/* line 1519, scss/_classes.scss */
+/* line 1526, scss/_classes.scss */
 .ui-rangeSlider-container {
   height: 22px; }
 
-/* line 1523, scss/_classes.scss */
+/* line 1530, scss/_classes.scss */
 .ui-rangeSlider-withArrows .ui-rangeSlider-container {
   margin: 0 11px; }
 
-/* line 1527, scss/_classes.scss */
+/* line 1534, scss/_classes.scss */
 .ui-rangeSlider-noArrow .ui-rangeSlider-container {
   margin: 0; }
 
-/* line 1531, scss/_classes.scss */
+/* line 1538, scss/_classes.scss */
 .ui-rangeSlider-label {
   background: #FFF;
   border: 1px solid #cccccc;
@@ -2002,7 +2009,7 @@ fieldset {
   padding: 13px 16px;
   cursor: col-resize;
   position: relative; }
-  /* line 1541, scss/_classes.scss */
+  /* line 1548, scss/_classes.scss */
   .ui-rangeSlider-label:after, .ui-rangeSlider-label:before {
     top: 100%;
     border: solid transparent;
@@ -2011,14 +2018,14 @@ fieldset {
     width: 0;
     position: absolute;
     pointer-events: none; }
-  /* line 1551, scss/_classes.scss */
+  /* line 1558, scss/_classes.scss */
   .ui-rangeSlider-label:after {
     border-color: rgba(204, 204, 204, 0);
     border-top-color: #FFF;
     border-width: 9px;
     left: 50%;
     margin-left: -10px; }
-  /* line 1559, scss/_classes.scss */
+  /* line 1566, scss/_classes.scss */
   .ui-rangeSlider-label:before {
     border-color: rgba(255, 255, 255, 0);
     border-top-color: #CCC;
@@ -2026,11 +2033,11 @@ fieldset {
     left: 50%;
     margin-left: -11px; }
 
-/* line 1568, scss/_classes.scss */
+/* line 1575, scss/_classes.scss */
 .ui-rangeSlider-label-inner {
   display: none; }
 
-/* line 1572, scss/_classes.scss */
+/* line 1579, scss/_classes.scss */
 input.ui-editRangeSlider-inputValue {
   width: 3em;
   vertical-align: middle;

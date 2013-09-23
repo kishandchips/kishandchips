@@ -1444,6 +1444,11 @@ fieldset {
 .ui-rangeSlider{
 	height:22px;
 
+	@include device-width(7) {
+		width: 90%;
+		margin: 0 auto;
+	}
+
 	.ui-rangeSlider-innerBar{
 		height:16px;
 		margin:3px 6px;
@@ -1504,11 +1509,13 @@ fieldset {
 	&.ui-rangeSlider-leftArrow{
 		background-image: url('../images/icons/resultset_previous.png');
 		background-position:center left;
+		left: -20px !important;
 	}
 
 	&.ui-rangeSlider-rightArrow{
 		background-image: url('../images/icons/resultset_next.png');
 		background-position:center right;
+		right: -20px !important;
 	}
 }
 

@@ -1318,12 +1318,28 @@ body {
 	.file-upload {
 		.ginput_container {
 			border: 1px solid #c6c6c6;
-			background: #f1f1f1;
+			background: #f1f1f1 url(../images/icons/file.jpg) 5% center no-repeat;
 			padding: 30px 50px;
+			position: relative;
 
 			input {
 				width: 100% !important;
+				margin-left: 24px;
 			}
+
+			.upload-btn {
+				position: absolute;
+				top: 18px;
+				left: 50px;
+				padding: 11px;
+				border: 1px solid #c0c0c0;
+				background-color: #ffffff;
+				@include filter-gradient(#ffffff, #f2f2f2, vertical);
+				@include background-image(linear-gradient(top,  #ffffff 0%,#f2f2f2 100%));
+				@include box-shadow(0px 2px 1px #c1c1c1);
+				@include avenir-heavy;
+				font-size: 14px;
+			}			
 		}
 	}
 
